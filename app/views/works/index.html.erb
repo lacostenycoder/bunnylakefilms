@@ -1,0 +1,51 @@
+<body class="no-js page-stage">
+
+<div class="container fullsite">
+
+    <%= render partial: 'base/menu' %>
+
+    <hr/>
+
+	<%= render partial: 'cat_menu' %>
+
+<div class="content" id="stage">
+
+    <div id="videoFrame">
+        <iframe id="video-player" src="" width="100%" height="100%" frameborder="0"
+                byline="0" color="ce3229" title="0" badge="0" autoplay="1" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+		</iframe>
+    </div>
+
+    <div class="folio" id="stagethumbs">
+        <div class="thumblist stage clearfix">
+
+			<% @works.each_with_index do |work, index| %>
+
+				<% div_class = "thumb video-thumb" %>
+				<% div_class = "#{div_class} tablet-last" if index.odd? %>
+				<% div_class = "#{div_class} last" if ((index+1)%3).zero? %>
+
+	            <div class="<%= div_class %>">
+					<%= link_to work do %>
+	                    <div class='playarrow'></div>
+	                    <div class="videowrap">
+							<%= image_tag_from_asset_server(work) %>
+	                    </div>
+					<% end %>
+	            </div>
+
+			<% end %>
+
+        </div>
+        <div style="clear:both;"></div>
+    </div>
+</div>
+
+</div>
+</div>
+
+<%= render partial: 'base/mobile_index' %>
+
+<%= render partial: 'base/footer' %>
+
+</body>

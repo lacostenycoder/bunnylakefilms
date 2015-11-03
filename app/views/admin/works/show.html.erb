@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @work.title %>
+</p>
+
+<p>
+  <strong>Still Code:</strong>
+  <%= @work.still_code %>
+</p>
+
+<p>
+  <strong>Video Code:</strong>
+  <%= @work.video_code %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @work.description %>
+</p>
+
+<%= link_to 'Edit', edit_admin_work_path(@work) %> |
+<%= link_to 'Back', admin_works_path %>

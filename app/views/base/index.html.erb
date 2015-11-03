@@ -1,0 +1,148 @@
+<body class="no-js page-home">
+
+<div id="container" class="container fullsite">
+
+	<div id="supra_menu">
+		<nav id="menu" class="front_super_menu header">
+			<ul>
+				<!-- <li><%= link_to 'Bunny Lake Films', root_path %></li> -->
+				<li class="up_bump_image"><%= link_to image_tag('bunny_trans_107h.png', width: 231, height: 107), root_path %></li>
+				<!-- <li><%# link_to image_tag('bunny_trans_30_2.png', width: 231, height: 89), root_path %></li> -->
+				<li class="up_bump"><%= link_to 'About', services_path %></li>
+				<li class="up_bump"><%= link_to 'Team', team_path %></li>
+				<li class="up_bump">
+					<%= link_to 'Work', works_path %>
+					<ul>
+						<% all_options = {} %>
+						<% (all_options[:class] = 'selected') unless @category %>
+							<li><%= link_to 'All', works_path, all_options %></li>
+						<% Category.all.each do |cat| %>
+							<% options = {} %>
+							<% (options[:class] = 'selected') if @category and cat == @category %>
+						    <li><%= link_to cat.name, category_works_path(cat), options %></li>
+						<% end %>
+					</ul>
+				</li>
+				<li class="up_bump"><%= link_to 'Contact', contact_path %></li>
+			</ul>
+		</nav>
+		<div style="clear:both;"></div>
+	</div>
+
+<style type="text/css" media="screen">
+/*#container {
+    min-height: 100%;
+}
+.header {
+    min-height: 140px;
+    margin-bottom: 20px;
+    background-color: white;
+	opacity: 0.80;
+    background-size: 100% auto;
+    position: relative;
+    z-index: 50;
+    overflow: hidden;
+}
+#content {
+    margin-bottom: 50px;
+    overflow: hidden;
+}*/
+
+#supra_menu {
+	position:absolute !important;
+	left: 0 !important;
+	top: 0 !important;
+	background-color: white;
+	opacity: 0.80;
+	height: 175px !important;
+    margin-top: 0px !important;
+    width: 100%;
+	z-index: 10000;
+}
+
+.front_super_menu {
+	position:relative !important;
+	width: 860px !important;
+	margin-right: auto !important;
+	margin-left: auto !important;
+}
+
+#menu ul {
+/*	opacity: 0.80;*/
+/*	position: relative;
+	text-align: center;
+	width: 500px;
+	margin-right: auto;
+	margin-left: auto;*/
+}
+
+</style>
+
+
+
+	<!-- <nav id="menu" class="front_super_menu">
+	    <div><%= link_to 'Bunny Lake Films', root_path, style: 'color: #D3463E !important;' %></div>
+		<div><%= link_to 'Team', team_path %></div>
+		<div><%= link_to 'Work', works_path %></div>
+		<div><%= link_to 'Services', services_path %></div>
+		<div class="last"><a href="#" class="mail_info">Contact</a></div>
+	</nav>
+	<div style="clear:both;"></div> -->
+
+    <hr>
+
+	<div class="content" id="home">
+	    <div class="bg-video videowrap">
+			
+			<% @front_images = ['FreedomTheater_01.jpg',
+								'ALDO_02.jpg',
+								'BodyEditions_05.jpg',
+								'Buttercup_04.jpg',
+								'Buttercup02.jpg',
+								'Caryes_03.jpg',
+								'Christophe_02.jpg',
+								'DAddario_02.jpg',
+								'Flux05.jpg',
+								'Girl_Seaweed.jpg',
+								'Janka_02.jpg',
+								'Janka_03.jpg',
+								'Joneses_cross.jpg',
+								'Karen_YYY.jpg',
+								'Karen2_YYY.jpg',
+								'Kembra_bunnylake.jpg',
+								'LanadelRay.jpg',
+								'LeonMax_01.jpg',
+								'Malandrino_02.jpg',
+								'Malandrino_behind the scenes.jpg',
+								'Medora_02.jpg',
+								'Medora_05.jpg',
+								'Paris_01.jpg',
+								'Patricia_02.jpg',
+								'PrincessSuperstar.jpg',
+								'RunRunRun_01.jpg',
+								'TN_Cover_03.jpg',
+								'TN_Cover_screenshot.jpg',
+								'walterSteding_01-2.jpg',
+								'WalterSteding_02.jpg'].shuffle %>
+
+			<% @front_images.each_with_index do |image_name, index| %>
+				<div id="front_bg_<%= index %>" class="video-placeholder-img" style="<%= 'display:none;' if index > 0 %>background:url('/system/front_images/<%= image_name %>') no-repeat center 175px fixed; -webkit-background-size: auto 100%;-moz-background-size:auto 100%;-o-background-size: auto 100%;background-size: auto 100%;"></div>
+			<% end %>
+			
+			<!-- <video id="home_bg_loop" style="visibility: hidden; opacity: 0" autoplay loop="loop">
+	            <source src="/video/frontpage_loop.mp4" type='video/mp4' />
+	            <source src="/video/frontpage_loop.webm" type='video/webm' />
+	            <source src="/video/frontpage_loop.ogv" type='video/ogg' />
+			</video> -->
+				
+		</div>
+
+	</div>
+
+</div>
+
+<%= render partial: 'mobile_index' %>
+
+<%= render partial: 'footer' %>
+
+</body>

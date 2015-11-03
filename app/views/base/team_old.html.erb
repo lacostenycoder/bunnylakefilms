@@ -1,0 +1,134 @@
+<body class="no-js page-backstage">
+<div class="container fullsite">
+
+    <%= render partial: 'menu' %>
+
+    <hr/>
+
+<div class="content" id="backstage">
+
+    <!-- <div class="mobile-info-panel">
+        <div class="mobile-info-panel-inner">
+            <div class="info fl">
+                <div class="info-content">
+                    <p>500 Street Apt 12<br/>
+                        Brooklyn, NY 11211<br/>
+                        USA<br/>
+                        <a href="tel:+16465555555">+1 646 555 5555</a><br/>
+                        <span class="email"><a href="#" class="mail_info">info(*)bunnylakefilms.com</a></span>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div> -->
+
+
+    <div class="cols clearfix">
+        <div class="left">
+            <div class="inner">
+                <p>153 Roebling Street #3G<br/>
+                    Brooklyn, NY 11211<br/>
+                    USA<br/>
+					<br>
+                    <a class="dark_background" href="tel:+16465915278">+1 646 591 5278</a><br/>
+                    <span class="email">
+						<a href="#" class="mail_info dark_background">
+							<%= obfuscated_email %>
+						</a>
+					</span>
+                </p>
+                <hr/>
+            </div>
+        </div>
+        <div class="right">
+            <div class="card aviva">
+                <div>
+                    <img src="/system/team_images/bunny_lake_team_logo.png" />
+                    <div class="info">
+                        <p><span class="name">Aviva Wishnow</span><br/>
+                            Producer
+                        </p>
+                        <p>
+							<br>
+							<a href="tel:+13474002015">+1 347 400 2015</a>
+							<br>
+                            <a href="#" class="mail_aviva">
+								<%= obfuscated_email('aviva') %>
+							</a>
+                        </p>
+                    </div>
+                </div>
+                <div style="clear:both;"></div>
+            </div>
+            <div class="card jappe">
+                <div>
+                    <img src="/system/team_images/bunny_lake_team_logo.png" />
+                    <div class="info">
+                        <p><span class="name">Celine Danhier</span><br/>
+                            Creative Director &amp; Filmmaker
+                        </p>
+                        <p>
+							<br>
+							<a href="tel:+16465915278">+1 646 591 5278</a>
+							<br>
+                            <a href="#" class="mail_celine">
+								<%= obfuscated_email('celine') %>
+							</a>
+                        </p>
+                    </div>
+                </div>
+                <div style="clear:both;"></div>
+            </div>
+            <div class="card jp">
+                <div>
+                    <img src="/system/team_images/bunny_lake_team_logo.png" />
+                    <div class="info">
+                        <p><span class="name">Rachel Dengiz</span><br/>
+                            Producer &amp; Filmmaker
+                        </p>
+                        <p>
+							<br>
+							<a href="tel:+19178048614">+1 917 804 8614</a>
+							<br>
+                            <a href="#" class="mail_rachel">
+								<%= obfuscated_email('rachel') %>
+							</a>
+                        </p>
+                    </div>
+                </div>
+                <div style="clear:both;"></div>
+            </div>
+            <div class="card jussi">
+                <div>
+                    <img src="/system/team_images/bunny_lake_team_logo.png" />
+                    <div class="info">
+                        <p><span class="name">Vanessa Roworth</span><br/>
+                            Editor &amp; Post Supervisor
+                        </p>
+                        <p>
+							<br>
+							<a href="tel:+16468310029">+1 646 831 0029</a>
+							<br>
+                            <a href="#" class="mail_vanessa">
+								<%= obfuscated_email('vanessa') %>
+							</a>
+                        </p>
+                    </div>
+                </div>
+                <div style="clear:both;"></div>
+            </div>
+        </div>
+    </div>
+    <div style="clear:both;"></div>
+
+</div>
+
+</div>
+</div>
+
+<%= render partial: 'mobile_index' %>
+
+<%= render partial: 'footer' %>
+
+</body>

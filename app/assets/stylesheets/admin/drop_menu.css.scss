@@ -1,0 +1,61 @@
+// Place all the styles related to the admin/contacts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+nav ul#ae_drop {
+  text-align: left;
+  display: inline;
+  margin: 0;
+  list-style: none;
+}
+
+nav ul#ae_drop li {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+nav ul#ae_drop li ul {
+  padding: 0;
+  position: absolute;
+  left: 0;
+  width: 150px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transiton: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -ms-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  -transition: opacity 0.2s;
+  z-index: 100;
+}
+
+nav ul#ae_drop li ul li { 
+  display: block; 
+  color: black;
+  z-index: 100;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-style: italic;
+  background: #000000;
+}
+
+nav ul#ae_drop li ul li a:hover { 
+  color: white;
+}
+
+nav ul#ae_drop li:hover ul {
+  display: block;
+  opacity: 0.87;
+  visibility: visible;
+  z-index: 200;
+}

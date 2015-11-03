@@ -1,0 +1,13 @@
+<nav id="cat_menu">
+	<div><%= link_to ((@category && @category.name) or 'All'), works_path %></div>
+</nav>
+<!-- <nav id="cat_menu">
+	<% all_options = {} %>
+	<% (all_options[:class] = 'selected') unless @category %>
+		<div><%= link_to 'All', works_path, all_options %></div>
+	<% Category.all.each do |cat| %>
+		<% options = {} %>
+		<% (options[:class] = 'selected') if @category and cat == @category %>
+	    <div><%= link_to cat.name, category_works_path(cat), options %></div>
+	<% end %>
+</nav> -->

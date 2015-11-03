@@ -1,0 +1,33 @@
+<%= render "admin/base/header" %>
+
+<main class="crud-container">
+
+<%= link_to 'Add New User', new_admin_user_path, :class => 'new-user-btn btn-primary' %>
+
+  <table class="table non_sortable" data-sortable-table-name="categories" data-sortable-singular-name="user">
+  	<thead>
+  		<tr>
+  			<th>Email</th>
+  			<th class="last">&nbsp;</th>
+  		</tr>
+  	</thead>
+
+  	<tbody>
+  		<% @users.each do |user| %>
+  			<%= content_tag(:tr, class: 'item', data: {'item-id' => user.id}) do %>
+
+  				<td><%= link_to user.email, edit_admin_user_path(user) %></td>
+  				<td class="last">
+  					<%= link_to "Edit", edit_admin_user_path(user) %> |
+  					<%= link_to "Delete", admin_user_path(user), :method => :delete, data: {confirm: "Are you sure?"} %>
+  				</td>
+
+  			<% end %>
+  		<% end %>
+  	</tbody>
+
+  </table>
+
+<div class="pag"></div>
+
+</main>

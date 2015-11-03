@@ -1,0 +1,49 @@
+<%= render "admin/base/header" %>
+
+<main class="crud-container">
+
+<%= link_to 'Add New Work', new_admin_work_path, :class => 'new-user-btn btn-primary' %>
+
+<% @categories.each do |category| %>
+
+  <table class="table sortable" data-sortable-table-name="works" data-sortable-singular-name="work">
+  	<thead>
+  		<tr>
+  			<th>Title</th>
+  			<th>Host</th>
+  			<th>Category</th>
+  			<th>Description</th>
+  			<th>Mobile</th>
+  			<th class="last">&nbsp;</th>
+  		</tr>
+  	</thead>
+
+  	<tbody>
+  		<% Work.where(category_id: category.id).rank(:row_order).each do |work| %>
+  			<%= content_tag(:tr, class: 'item', data: {'item-id' => work.id}) do %>
+
+  				<td><%= link_to work.title, edit_admin_work_path(work) %></td>
+  				<td><%= link_to work.host, edit_admin_work_path(work) %></td>
+  				<td><%= link_to work.category.name, edit_admin_work_path(work) %></td>
+  				<td><%= link_to truncate(work.description || '', length: 140), edit_admin_work_path(work) %></td>
+          <% check_mark = work.mobile ? '&#10004;'.html_safe : '' %>
+          <td><%= link_to check_mark, edit_admin_work_path(work) %></td>
+  				<td class="last">
+  					<%= link_to "Preview", work_path(work), target: '_blank' %> |
+  					<%= link_to "Edit", edit_admin_work_path(work) %> |
+  					<%= link_to "Delete", admin_work_path(work), :method => :delete, data: {confirm: "Are you sure?"} %>
+  				</td>
+
+  			<% end %>
+  		<% end %>
+  	</tbody>
+
+  </table>
+  
+  <br>
+  
+<% end %>
+
+<div class="pag"></div>
+
+</main>

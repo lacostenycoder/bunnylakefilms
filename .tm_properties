@@ -1,0 +1,1 @@
+excludeInFolderSearch = "{$excludeInFolderSearch,$extraExcludes,log,cache,system,profiles,public/assets,tmp/cache,tmp/upload_store,tmp/upload_state_store}"

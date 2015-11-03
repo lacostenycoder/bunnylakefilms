@@ -1,0 +1,332 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+
+.crud-container {
+	min-height: 100%;
+	margin: 0 auto;
+	max-width: 1024px;
+	position: relative;
+	width: 100%;
+
+	div.show_crud {
+		font-weight: 200;
+		position: relative;
+		top: 20px;
+		width: 75%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.new-user-btn {
+		background: rgb(34, 34, 34);
+		color: #fff;
+		padding: 4px;
+
+		&:hover {
+			color: rgb(245, 215, 156);
+		}
+	}
+
+	.table {
+		background: rgba(150, 150, 150, 0.1);
+		position: relative;
+		top: 20px;
+	}
+
+
+	h1 {
+		font-weight: 200;
+		position: relative;
+		top: 20px;
+	}
+
+	.search-field {
+		background: rgb(0, 0, 0);
+		background: rgba(150, 150, 150, 0.1);
+		border: 0;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+		color: rgb(255, 255, 255);
+		display: block;
+		font-family: "Helvetica Neue", Helvetica, 'myriad-pro';
+		font-size: 20px;
+		font-weight: 200;
+		height: 34px;
+		margin: 0 auto;
+		text-indent: 40px;
+		width: 50%;
+	}
+
+	.search-icon {
+		color: rgb(122, 122, 122);
+		font-size: 38px;
+		position: absolute;
+		left: 26%;
+	}
+
+	.clear-search-field {
+		color: rgb(122, 122, 122);
+		font-size: 24px;
+		font-weight: lighter;
+		position: absolute;
+		right: 27%;
+		top: 6px
+	}
+
+	.pag {
+		height: 20px;
+		padding: 14px 0;
+	}
+
+	h1 {
+		text-align: center;
+	}
+
+	form {
+
+	}
+
+	label {
+		display: inline-block;
+		font-family: "Helvetica Neue", Helvetica, "myriad-pro", "brandon-grotesque";
+		font-size: 18px;
+		font-weight: 100;
+		line-height: 28px;
+		text-align: right;
+		width: 35%;
+	}
+
+	dt {
+		float: left;
+		font-family: "Helvetica Neue", Helvetica, "myriad-pro", "brandon-grotesque";
+		font-size: 20px;
+		height: 40px;
+		font-weight: 200;
+		text-align: right;
+		width: 35%;
+	}
+
+	dd {
+		height: 40px;
+		float: left;
+		line-height: 23px;
+		text-indent: 20px;
+		width: 65%;
+	}
+
+	select {
+		display: block;
+		margin-left: 20px;
+	}
+
+	.field {
+		display: inline;
+		width: 65%;
+	}
+
+	#error_explanation {
+		position: relative;
+		top: 20px;
+	}
+
+	.field_with_errors {
+  	background: none;
+  	display: inline;
+  	padding: 0;
+
+		input {
+			border: 1px solid red;
+		}
+
+	}
+
+	.actions {
+		clear: both;
+		margin: 0 auto;
+		height: 120px;
+		width: 50%;
+	}
+
+}
+
+
+.approval-request {
+	background: rgba(190, 80, 80, .8);
+}
+
+.confirm-request {
+	background: rgba(120, 120, 120, .8);
+}
+
+.edit-crud,
+.new-crud {
+	background: rgba(150, 150, 150, 0.05);
+	min-height: 100%;
+
+	#standard_app_checkboxes {
+//    min-height: 400px;
+	}
+
+	.app-headline {
+		color: rgb(255, 255, 255);
+		font-size: 30px;
+		font-weight: 200;
+		position: relative;
+		top: 20px;
+		padding: 30px 0;
+		width: 35%;
+		text-align: right;
+	}
+
+	input, .destroy_button, textarea {
+		background: rgb(64, 64, 64);
+		border: 0;
+		color: rgb(255, 255, 255);
+		font-family: "myriad-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		font-size: 16px;
+		font-weight: 200;
+		height: 25px;
+		margin-left: 20px;
+	}
+
+	textarea {
+		margin-top: 10px;
+		height: 300px;
+		padding-left: 10px;
+		width: 50%;
+	}
+
+	textarea#media_asset_embed_code {
+		height: 100px;
+	}
+
+	.chosen-container {
+		position: relative;
+		margin-right: 25%;
+		left: 20px;
+	}
+
+	.chosen-drop {
+		background: rgb(64, 64, 64);
+		border: 1px solid rgb(150, 150, 150);
+	}
+
+	.chosen-container-active.chosen-with-drop .chosen-single {
+		box-shadow: none;
+		background: rgb(64, 64, 64);
+	}
+
+	.chosen-single {
+		background: rgb(64, 64, 64);
+		box-shadow: none;
+		border: 1px solid rgb(150, 150, 150);
+		color: rgb(255, 255, 255);
+	}
+
+	.chosen-results {
+		background: rgb(64, 64, 64);
+	}
+
+	.chosen-results li.highlighted {
+		background: rgb(150, 150, 150);
+	}
+
+	input[type='text'],
+	input[type='password'],
+	input[type='number']{
+		text-indent: 10px;
+		width: 30%;
+		margin-right: 25%;
+	}
+
+	input[type='checkbox'] {
+		bottom: 3px;
+		position: relative;
+		margin-right: 35%;
+	}
+
+	.btn-primary {
+		background: rgb(64, 64, 64);
+		border-radius: 4px;
+		box-shadow: none;
+			box-shadow: 0 5px 0 0 rba(80, 80, 80);
+
+		float: right;
+		font-size: 14px;
+		font-weight: bold;
+		line-height: 0;
+		padding: 3px 6px;
+		position: relative;
+		text-align: center;
+		top: 20px;
+
+		&:hover {
+			color: rgb(245, 215, 156);
+		}
+	}
+
+}
+
+.role {
+	color: #fff!important;
+	font-size: 12px;
+}
+
+.user-logo {
+	background-repeat: no-repeat;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+
+
+.user_section_logo_drop {
+	margin-top: 50px;
+}
+
+.user_registration_logo_drop {
+	margin-top: 150px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 380px;
+}
+
+.registration_show {
+
+	text-align: center;
+
+	h3 {
+		color: rgb(255, 255, 255);
+		font-size: 30px;
+		font-weight: 200;
+		position: relative;
+		top: 20px;
+		padding: 30px 0;
+	}
+	p {
+		margin-bottom: 20px;
+		font-size: 18px;
+	}
+}
+
+.quick-approve-user {
+	font-size: 10px;
+	background: rgb(34, 34, 34);
+	color: #fff !important;
+	padding: 2px 4px;
+
+	&:hover { color: rgb(245, 215, 156); }
+}
+
+// Supplimental Additions
+
+label.textarea {
+	vertical-align: top;
+}
+
+.edit-new-menu {
+	padding-top: 15px;
+	padding-left: 15px;
+}
