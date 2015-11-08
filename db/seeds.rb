@@ -1,8 +1,28 @@
-User.create!([
-  {email: "andy@andyeisberg.com", encrypted_password: "$2a$10$izmG/qP3ftfo0GLgS5DG9O3oPK0u3MkmRWtRIK9u9E30ahf.Tdc7K", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 4, current_sign_in_at: "2015-10-01 18:03:15", last_sign_in_at: "2015-10-01 18:02:50", current_sign_in_ip: "127.0.0.1", last_sign_in_ip: "127.0.0.1", failed_attempts: 0, unlock_token: nil, locked_at: nil},
-  {email: "avivalasvegas@gmail.com", encrypted_password: "$2a$10$qRE5D6Uegb0ztRSABJ/M2ecaqFpxf9xFfpXXcNKpRBdO0GArrzJRe", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 0, current_sign_in_at: nil, last_sign_in_at: nil, current_sign_in_ip: nil, last_sign_in_ip: nil, failed_attempts: 0, unlock_token: nil, locked_at: nil},
-  {email: "lance@lancejordan.com", encrypted_password: "$2a$10$z0CWYTHz6rLItISpJ3zWmeeTaB1bxfLvJAibZJNXzwHiImQh5PLWa", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 1, current_sign_in_at: "2015-11-06 20:55:19", last_sign_in_at: "2015-11-06 20:55:19", current_sign_in_ip: "127.0.0.1", last_sign_in_ip: "127.0.0.1", failed_attempts: 0, unlock_token: nil, locked_at: nil}
-])
+temp_password = "fat12345"
+u = User.new
+u.email = "andy@andyeisberg.com"
+u.password = temp_password
+u.password_confirmation = temp_password
+u.save!
+u.encrypted_password = "$2a$10$izmG/qP3ftfo0GLgS5DG9O3oPK0u3MkmRWtRIK9u9E30ahf.Tdc7K"
+u.save!
+
+u = User.new
+u.email="avivalasvegas@gmail.com"
+u.password = temp_password
+u.password_confirmation = temp_password
+u.save!
+u.encrypted_password = "$2a$10$qRE5D6Uegb0ztRSABJ/M2ecaqFpxf9xFfpXXcNKpRBdO0GArrzJRe"
+u.save!
+
+u = User.new
+u.email = "lance@lancejordan.com"
+u.password = temp_password
+u.password_confirmation = temp_password
+u.save!
+u.encrypted_password = "$2a$10$li64VZoG/7KODAJN//iEfu2GVWPuAqaXq88x5sGI5bjED.2R21gie"
+u.save!
+
 Category.create!([
   {name: "Art + Culture", row_order: -7789420},
   {name: "Commercials", row_order: 5991863},
