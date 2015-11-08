@@ -3,6 +3,10 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
+Do this to import SQL
+
+https://gist.github.com/seyhunak/7843549
+
 Things you may want to cover:
 
 * Ruby version

@@ -43,13 +43,15 @@ ActiveRecord::Schema.define(version: 20150930133434) do
   create_table "works", force: true do |t|
     t.string   "title"
     t.integer  "still_code"
-    t.string   "video_code"
+    t.integer  "video_code"
     t.text     "description"
     t.integer  "category_id"
-    t.integer  "host_id"
+    t.integer  "host_id",     limit: 1, default: 1
+    t.integer  "row_order"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "mobile"
   end
+
+  add_index "works", ["row_order"], name: "index_works_on_row_order", using: :btree
 
 end
