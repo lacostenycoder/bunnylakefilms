@@ -39,6 +39,7 @@ end
 # Use unicorn as the app server
 group :production do
   gem 'unicorn'
+  gem 'rack', '1.5.5'
 end
 
 
