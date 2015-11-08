@@ -1,0 +1,52 @@
+# MySQL.  Versions 5.0+ are recommended.
+#
+# Install the MYSQL driver
+#   gem install mysql2
+#
+# Ensure the MySQL gem is defined in your Gemfile
+#   gem 'mysql2'
+#
+# And be sure to use new-style password hashing:
+#   http://dev.mysql.com/doc/refman/5.0/en/old-client.html
+#
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: root
+  password:
+  socket: /tmp/mysql.sock
+
+development:
+  <<: *default
+  database: bunny_lake_development
+  username: root
+
+test:
+  <<: *default
+  database: bunny_lake_test
+
+# On Heroku and other platform providers, you may have a full connection URL
+# available as an environment variable. For example:
+#
+#   DATABASE_URL="mysql2://myuser:mypass@localhost/somedatabase"
+#
+# You can use this database configuration with:
+#
+#   production:
+#     url: <%= ENV['DATABASE_URL'] %>
+#
+# production:
+#   <<: *default
+#   database: bunny_lake_production
+#   username: root
+#   password: Urb@nwarrior
+#   host: 192.168.168.22
+
+# This section needs to be configured with mysql credentials on server
+
+production:
+  <<: *default
+  database: bunny_lake_production
+  username: rails
+  password: <%= ENV['APP_DATABASE_PASSWORD'] %>
