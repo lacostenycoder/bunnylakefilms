@@ -1,10 +1,12 @@
 class Work < ActiveRecord::Base
   include OrderedControl
   include RankedModel
-  
+
   belongs_to :category
+  accepts_nested_attributes_for :category
+
   ranks :row_order, :with_same => :category_id
-  
+
   HOST_CODES = {
     1 => {:name => :vimeo,    :label => 'Vimeo'},
     2 => {:name => :you_tube, :label => 'YouTube'},

@@ -44,6 +44,7 @@ class WorksController < ApplicationController
 
   # PATCH/PUT /works/1
   # PATCH/PUT /works/1.json
+
   def update
     respond_to do |format|
       if @work.update(work_params)
@@ -74,6 +75,6 @@ class WorksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def work_params
-      params.require(:work).permit(:title, :code, :description)
+      params.require(:work).permit(:title, :code, :description, :category_id)
     end
 end

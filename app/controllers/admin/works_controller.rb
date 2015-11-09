@@ -19,6 +19,7 @@ class Admin::WorksController < Admin::BaseController
 
   # GET /admin/works/1/edit
   def edit
+    @category = Category.find(@work.category_id)
   end
 
   # POST /admin/works
@@ -77,6 +78,6 @@ class Admin::WorksController < Admin::BaseController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def work_params
-      params.require(:work).permit(:title, :video_code, :still_code, :mobile, :description, :row_order_position)
+      params.require(:work).permit(:title, :video_code, :still_code, :mobile, :description, :row_order_position, :category_id)
     end
 end
