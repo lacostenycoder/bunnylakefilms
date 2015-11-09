@@ -22,4 +22,10 @@
 			<li><%= link_to('Logout', destroy_user_session_path, :method => :delete, :class => "logout_plain") %></li>
 		</ul>
 	</nav>
+
+	<div class="flash">
+		<% flash.each do |key, value| %>
+	        <div class="alert alert-<%= key %>" id="alert-fade"><%= value %></div>
+	      <% end %>
+	</div>
 </header>

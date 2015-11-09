@@ -395,5 +395,20 @@ ul.grid_setup.grid_with_buttons li {
   color: #FF3B30;
 }
 
+.alert {
+  position: absolute;
+  top: 50px;
+  background-color: #333;
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+}
 
+.alert-success {
+  color: #6ae36d;
+}
 
+.alert-notice {
+  color: #ff4d4d;
+}
