@@ -27,7 +27,7 @@ $(document).on 'ready page:load', ->
   # Bind Panel Sort Links
   $.standardDataAttributeCookieBinding("data-works-panel-sort", "works_panel_current_sort")
   $.standardDataAttributeCookieBinding("data-categories-panel-sort", "categories_panel_current_sort")
-  
+
   # Search buttons
   search_submit = (event) ->
     event.preventDefault()
@@ -48,7 +48,7 @@ $(document).on 'ready page:load', ->
     cells = $('.table').find('tr')[0].cells.length
     desired_width = table_width / cells + 'px'
     $('.table td').css('width', desired_width)
-    
+
     $('.sortable').sortable(
       axis: 'y'
       items: '.item'
@@ -86,7 +86,7 @@ $(document).on 'ready page:load', ->
 
   $('#portfolio_check_all').change (event) ->
     $('.portfolio_ids').prop('checked', this.checked)
-  
+
   # Success & Error on remotes
   $("a[data-remote]").on "ajax:error", (e, xhr, status, error) ->
     alert "Something went wrong"

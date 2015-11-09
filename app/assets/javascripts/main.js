@@ -1,7 +1,7 @@
 $(window).load(function() {
 	// Slideshow
 	setInterval(function(){
-		$('.bg-video :first-child').fadeOut(1000).next('div').fadeIn(1000).end().appendTo('.bg-video');}, 
+		$('.bg-video :first-child').fadeOut(1000).next('div').fadeIn(1000).end().appendTo('.bg-video');},
 	4000);
 });
 
@@ -70,17 +70,17 @@ function initialize()
         e.preventDefault();
         window.location.href = "mailto:rachel@bunnylakefilms.com";
     });
-	
+
     $('a.mail_aviva').click(function(e) {
         e.preventDefault();
         window.location.href = "mailto:aviva@bunnylakefilms.com";
     });
-	
+
     $('a.mail_celine').click(function(e) {
         e.preventDefault();
         window.location.href = "mailto:celine@bunnylakefilms.com";
     });
-	
+
     $('a.mail_vanessa').click(function(e) {
         e.preventDefault();
         window.location.href = "mailto:vanessa@bunnylakefilms.com";

@@ -135,6 +135,44 @@ hr {
     padding: 0;
 }
 
+// client list settings
+
+ul.client-list  {
+}
+
+.client-list-block ul {
+  display: block;
+}
+
+.client-list-mobile ul {
+  margin-left: 33.33%;
+  text-align: left;
+}
+
+.client-list-dark ul li {
+  color: #FFF;
+  text-align: left;
+}
+
+.list-3-columns {
+  -moz-column-count: 3;
+  -moz-column-gap: 26px;
+  -webkit-column-count: 3;
+  -webkit-column-gap: 26px;
+  column-count: 3;
+  column-gap: 26px;
+}
+
+ul.circled li {
+  display: list-item;
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+// ul.circled li {
+//   display: list-item;
+// }
+
 .fl {
     float: left;
 }
@@ -331,7 +369,7 @@ nav.front_super_menu {
 }
 
 nav.front_super_menu a {
-	
+
 }
 
 #frontmenu {
@@ -609,7 +647,7 @@ nav.front_super_menu a {
 
 
 
-#super_about {
+.super_about {
 	font-family: "futura-pt",sans-serif;
 	font-size: 14px !important;
 	line-height: 20px !important;
@@ -1229,9 +1267,9 @@ nav#menu ul li ul {
   -transition: opacity 0.2s;
   z-index: 100;
 }
-nav#menu ul li ul li { 
-  background: #fff; 
-  display: block; 
+nav#menu ul li ul li {
+  background: #fff;
+  display: block;
   color: black;
   font-size: 20px;
   padding-left: 10px;
@@ -1276,4 +1314,3 @@ nav#menu ul li:hover ul {
 	font-weight: 500;
 	white-space: pre;
 }
-
