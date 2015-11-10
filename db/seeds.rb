@@ -25,9 +25,9 @@ u.save!
 
 Category.create!([
   {name: "Art + Culture", row_order: -7789420},
-  {name: "Commercials", row_order: 5991863},
+  {name: "PSA's + Commercials", row_order: 5991863},
   {name: "Fashion + Beauty", row_order: -7489827},
-  {name: "Features + Docs", row_order: -3595117},
+  {name: "Docs + Features", row_order: -3595117},
   {name: "Music", row_order: -1198372},
   {name: "Web Series", row_order: 3595118}
 ])
