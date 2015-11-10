@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
 
   devise_for :users
-  
+
   get '/admin' => 'admin/works#index'
-  
+
   namespace :admin do
     resources :works do
       post :update_row_order, on: :member
@@ -22,7 +22,7 @@ Rails.application.routes.draw do
 
   get '/portfolio' => 'base#portfolio'
   get '/team' => 'base#team'
-  get '/services' => 'base#services'
+  get '/about' => 'base#about'
   get '/contact' => 'base#contact'
 
   root 'base#index'

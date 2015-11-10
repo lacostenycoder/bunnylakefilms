@@ -101,6 +101,7 @@ namespace :admin do
 
     array.each do |item|
       work = Work.new(item)
+      work.mobile = true
       next unless work.save
     end
 

@@ -8,7 +8,7 @@
 				<!-- <li><%= link_to 'Bunny Lake Films', root_path %></li> -->
 				<li class="up_bump_image"><%= link_to image_tag('bunny_trans_107h.png', width: 231, height: 107), root_path %></li>
 				<!-- <li><%# link_to image_tag('bunny_trans_30_2.png', width: 231, height: 89), root_path %></li> -->
-				<li class="up_bump"><%= link_to 'About', services_path %></li>
+				<li class="up_bump"><%= link_to 'About', about_path %></li>
 				<li class="up_bump"><%= link_to 'Team', team_path %></li>
 				<li class="up_bump">
 					<%= link_to 'Work', works_path %>
@@ -78,22 +78,11 @@
 
 </style>
 
-
-
-	<!-- <nav id="menu" class="front_super_menu">
-	    <div><%= link_to 'Bunny Lake Films', root_path, style: 'color: #D3463E !important;' %></div>
-		<div><%= link_to 'Team', team_path %></div>
-		<div><%= link_to 'Work', works_path %></div>
-		<div><%= link_to 'Services', services_path %></div>
-		<div class="last"><a href="#" class="mail_info">Contact</a></div>
-	</nav>
-	<div style="clear:both;"></div> -->
-
     <hr>
 
 	<div class="content" id="home">
 	    <div class="bg-video videowrap">
-			
+
 			<% @front_images = ['FreedomTheater_01.jpg',
 								'ALDO_02.jpg',
 								'BodyEditions_05.jpg',
@@ -128,13 +117,13 @@
 			<% @front_images.each_with_index do |image_name, index| %>
 				<div id="front_bg_<%= index %>" class="video-placeholder-img" style="<%= 'display:none;' if index > 0 %>background:url('/system/front_images/<%= image_name %>') no-repeat center 175px fixed; -webkit-background-size: auto 100%;-moz-background-size:auto 100%;-o-background-size: auto 100%;background-size: auto 100%;"></div>
 			<% end %>
-			
+
 			<!-- <video id="home_bg_loop" style="visibility: hidden; opacity: 0" autoplay loop="loop">
 	            <source src="/video/frontpage_loop.mp4" type='video/mp4' />
 	            <source src="/video/frontpage_loop.webm" type='video/webm' />
 	            <source src="/video/frontpage_loop.ogv" type='video/ogg' />
 			</video> -->
-				
+
 		</div>
 
 	</div>
