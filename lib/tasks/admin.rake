@@ -26,8 +26,8 @@ namespace :admin do
     category_id: 3,
     title: 'BEAUTYLISH: MILA MOURSI',
     video_code: 142699833,
-    title: 'Director: Celine Danhier',
-    description: 'Production & Post: Bunny Lake Films'
+    description: 'Director: Celine Danhier
+    Production & Post: Bunny Lake Films'
     },
     {category_id: 3,
     video_code: 142699078,
