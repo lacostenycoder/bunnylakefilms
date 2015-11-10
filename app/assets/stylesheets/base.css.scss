@@ -1278,7 +1278,14 @@ nav#menu ul li ul li {
   padding-top: 0;
   padding-bottom: 0;
 }
-nav#menu ul li ul li:hover { color: #ce3229; }
+nav#menu ul li ul li:hover {
+   color: #ce3229;
+}
+
+li#docs-features, li#docs-features a {
+  color: red !important;
+}
+
 nav#menu ul li:hover ul {
   display: block;
   opacity: 0.87;
