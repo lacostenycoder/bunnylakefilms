@@ -1,9 +1,12 @@
 class Work < ActiveRecord::Base
   include OrderedControl
   include RankedModel
-
+  validates_uniqueness_of [:title, :video_code]
+  validates_presence_of [:title, :video_code]
   belongs_to :category
   accepts_nested_attributes_for :category
+
+  before_create :get_vimeo_still
 
   ranks :row_order, :with_same => :category_id
 
@@ -18,4 +21,25 @@ class Work < ActiveRecord::Base
   def host
     HOST_CODES[host_id || 1][:label]
   end
+
+  def get_vimeo_still
+    return self.still_code if self.still_code
+    self.still_code = lookup_vimeo
+  end
+
+  def lookup_vimeo
+    require 'open-uri'
+    begin
+      uri = URI.parse('https://vimeo.com/api/oembed.json?url=https%3A//vimeo.com/' + video_code.to_s)
+      response = open(uri).read
+      hash = JSON.parse(response).to_hash
+      p hash
+      thumb = hash['thumbnail_url']
+      still_code = thumb[(thumb.rindex(/\//)+1)...thumb.index('_')].to_i
+    rescue
+      still_code = nil
+    end
+    still_code
+  end
+
 end

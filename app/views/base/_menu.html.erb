@@ -11,7 +11,7 @@
 				<% all_options = {} %>
 				<% (all_options[:class] = 'selected') unless @category %>
 					<li><%= link_to 'All', works_path, all_options %></li>
-				<% Category.rank(:row_order).each do |cat| %>
+				<% Category.all.each do |cat| %>
 				  <% cat_id = cat.name.gsub('+','').downcase.split(' ').join('-') %>
 					<% options = {} %>
 					<% (options[:class] = 'selected') if @category and cat == @category %>

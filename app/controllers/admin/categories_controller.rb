@@ -4,7 +4,7 @@ class Admin::CategoriesController < Admin::BaseController
   # GET /admin/categories
   # GET /admin/categories.json
   def index
-    @categories = Category.rank(:row_order)
+    @categories = Category.order(:name)
   end
 
   # GET /admin/categories/1
