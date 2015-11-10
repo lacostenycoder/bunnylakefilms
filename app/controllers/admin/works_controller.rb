@@ -4,7 +4,7 @@ class Admin::WorksController < Admin::BaseController
   # GET /admin/works
   # GET /admin/works.json
   def index
-    @categories = Category.rank(:row_order)
+    @categories = Category.all
   end
 
   # GET /admin/works/1
