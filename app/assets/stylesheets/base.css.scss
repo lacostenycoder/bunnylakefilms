@@ -1159,9 +1159,9 @@ li#docs-features a:hover, li.psa-list-li::first-line:hover {
 li#psa-list {
   @extend .sub-menu-floated;
   display: list-item;
-  // position: relative;
-  top: 20px;
+  top: 18px;
   margin-top: -60px;
+  margin-bottom: 1px;
   height: 80px;
   z-index: 6000;
 }
@@ -1173,6 +1173,14 @@ li#psa-list {
 .psa-list-li ul, li#psa-list, li#psa-list a {
   color: #ba1937;
   display: none;
+}
+
+ul#psa-sub-ul {
+  display: none !important;
+}
+
+.psa-list-li:hover ul#psa-sub-ul {
+  display: block !important;
 }
 
 li.psa-list-li:hover ul li#psa-list a {
