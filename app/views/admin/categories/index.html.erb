@@ -1,10 +1,7 @@
-<%= render "admin/base/header" %>
-
 <main class="crud-container">
-
 <%= link_to 'Add New Category', new_admin_category_path, :class => 'new-user-btn btn-primary' %>
 
-  <table class="table sortable" data-sortable-table-name="categories" data-sortable-singular-name="category">
+  <table class="table non-sortable" data-sortable-table-name="categories" data-sortable-singular-name="category">
   	<thead>
   		<tr>
   			<th>Name</th>
@@ -27,7 +24,4 @@
   	</tbody>
 
   </table>
-
-<div class="pag"></div>
-
 </main>

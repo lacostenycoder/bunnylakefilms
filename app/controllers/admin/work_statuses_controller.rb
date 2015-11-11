@@ -1,4 +1,4 @@
-class Admin::WorkStatusesController < ApplicationController
+class Admin::WorkStatusesController < Admin::BaseController
   before_action :set_work_status, only: [:show, :edit, :update, :destroy]
 
   # GET /admin/work_statuses
