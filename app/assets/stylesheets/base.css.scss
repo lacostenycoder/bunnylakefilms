@@ -1125,7 +1125,7 @@ nav#menu ul li ul li {
   padding-bottom: 0;
 }
 
-li#docs-features, li#docs-features a {
+li#docs-features, li#docs-features a, li.psa-list-li::first-line {
   color: #ba1937;
 }
 
@@ -1140,8 +1140,48 @@ nav#menu ul li:hover ul {
   z-index: 200;
 }
 
-li#docs-features a:hover {
+li#docs-features a:hover, li.psa-list-li::first-line:hover {
   color: #FF0022;
+}
+
+.sub-menu-floated {
+  position: absolute;
+  top: 50%;
+  left: -100%;
+  margin: 0;
+  padding: 0;
+  width: 50px;
+  float:right;
+  clear: left;
+  z-index: 5000;
+}
+
+li#psa-list {
+  @extend .sub-menu-floated;
+  display: list-item;
+  // position: relative;
+  top: 20px;
+  margin-top: -60px;
+  height: 80px;
+  z-index: 6000;
+}
+
+.psa-list-li{
+  z-index: 9000;
+}
+
+.psa-list-li ul, li#psa-list, li#psa-list a {
+  color: #ba1937;
+  display: none;
+}
+
+li.psa-list-li:hover ul li#psa-list a {
+  z-index: 4000;
+  display: block;
+}
+
+ul.psa-list li:nth-child(1) {
+  margin-top: 10px;
 }
 
 .team_paragraphs {

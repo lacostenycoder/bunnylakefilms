@@ -1,0 +1,7 @@
+<li class="psa-list-li">Docs-Features
+  <ul class="psa-list">
+    <% WorkStatus.all.each do |ws| %>
+     <li id="psa-list"><%= link_to ws.name, work_status_works_path(ws) %></li>
+    <% end %>
+  </ul>
+</li>

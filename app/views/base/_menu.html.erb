@@ -3,17 +3,19 @@
 		<li class="up_bump_image"><%= link_to image_tag('bunny_trans_107h.png', width: 231, height: 107), root_path %></li>
 		<li class="up_bump"><%= link_to 'About', about_path %></li>
 		<li class="up_bump"><%= link_to 'Team', team_path %></li>
-		<li class="up_bump">
+		<li class="up_bump" id="works-drop-down">
 			<%= link_to 'Work', works_path %>
 			<ul>
 				<% all_options = {} %>
 				<% (all_options[:class] = 'selected') unless @category %>
-					<li><%= link_to 'All', works_path, all_options %></li>
+				<li><%= link_to 'All', works_path, all_options %></li>
 				<% Category.all.each do |cat| %>
-				  <% cat_id = cat.name.gsub('+','').downcase.split(' ').join('-') %>
-					<% options = {} %>
-					<% (options[:class] = 'selected') if @category and cat == @category %>
-				    <li id="<%= cat_id %>"><%= link_to cat.name, category_works_path(cat), options %></li>
+					<% cat_id = cat.name.gsub('+','').downcase.split(' ').join('-') %>
+					<% if cat.id == 4  %>
+						<%= render partial: 'base/psa', locals: {cat: cat}  %>
+					<% else %>
+				  	<li id="<%= cat_id %>"><%= link_to cat.name, category_works_path(cat) %></li>
+					<% end %>
 				<% end %>
 			</ul>
 		</li>

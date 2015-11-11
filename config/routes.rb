@@ -23,6 +23,12 @@ Rails.application.routes.draw do
     resources :works
   end
 
+  resources :work_statuses do
+    resources :works
+  end
+
+  resources :work_statuses
+
   resources :works
 
   get '/portfolio' => 'base#portfolio'

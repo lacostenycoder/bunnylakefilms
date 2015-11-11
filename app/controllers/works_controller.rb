@@ -4,7 +4,10 @@ class WorksController < ApplicationController
   # GET /works
   # GET /works.json
   def index
-    if params[:category_id]
+    if params[:work_status_id]
+      @work_status = WorkStatus.find(params[:work_status_id])
+      @works = @work_status.works
+    elsif params[:category_id]
       @category = Category.find(params[:category_id])
       @works = @category.works
     else

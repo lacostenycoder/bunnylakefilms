@@ -11,6 +11,8 @@ class Work < ActiveRecord::Base
 
   ranks :row_order, :with_same => :category_id
 
+  scope :psa, -> { where(category_id: 2) } 
+
   HOST_CODES = {
     1 => {:name => :vimeo,    :label => 'Vimeo'},
     2 => {:name => :you_tube, :label => 'YouTube'},
