@@ -1,10 +1,15 @@
 Rails.application.routes.draw do
 
+  namespace :admin do
+
+  end
+
   devise_for :users
 
   get '/admin' => 'admin/works#index'
 
   namespace :admin do
+    resources :work_statuses
     resources :works do
       post :update_row_order, on: :member
     end
