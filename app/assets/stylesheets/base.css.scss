@@ -83,15 +83,14 @@ html, body {
 // Changed #000000 standard color to black
 
 body {
-    margin: 0;
-    padding: 0;
-    background-color: white;
-	font-family: 'Tungsten-Medium', serif;
-	//font-family: "futura-pt",sans-serif;
-    font-size: 17px;
-    color: #000000;
-    overflow-x: hidden;
-    -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  font-family: 'Tungsten-Medium', serif;
+  font-size: 17px;
+  color: #000000;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 a {
     text-decoration: none;
@@ -169,10 +168,6 @@ ul.circled li {
   list-style-position: inside;
 }
 
-// ul.circled li {
-//   display: list-item;
-// }
-
 .fl {
     float: left;
 }
@@ -182,15 +177,14 @@ ul.circled li {
 }
 
 .mobile-info-panel {
-    display: none;
-    background: #161515;
-    width: 100%;
-    color: white;
-    text-transform: uppercase;
+  display: none;
+  background: #161515;
+  width: 100%;
+  color: white;
+  text-transform: uppercase;
 	font-family: 'Tungsten-Medium', serif;
-//	font-family: "futura-pt",sans-serif;
-    font-size: 21px;
-    margin-bottom: 20px;
+  font-size: 21px;
+  margin-bottom: 20px;
 }
 
 .mobile-info-panel .info {
@@ -229,17 +223,9 @@ ul.circled li {
     padding: 20px;
 }
 
-
-
-
 .page-home {
     background: white;
 }
-
-//.page-home footer, .page-home .container.fullsite #menu, .page-home .container.fullsite hr {
-//    display: none;
-//}
-
 .page-home footer, .page-home .container.fullsite hr {
     display: none;
 }
@@ -267,9 +253,6 @@ ul.circled li {
 .work_skip_prev { float: left; }
 .work_skip_next { float: right; }
 
-
-// ### Mobile ##################################
-
 .container.mobile {
     width: 100%;
     display: none;
@@ -277,21 +260,33 @@ ul.circled li {
 	margin-top: 0px;
 }
 
-.container.mobile .top .bg img {
-    /*width: 100%;
-    height: auto;*/
+
+#supra_menu {
+	position:absolute !important;
+	left: 0 !important;
+	top: 0 !important;
+	background-color: white;
+	opacity: 0.80;
+	height: 175px !important;
+    margin-top: 0px !important;
+    width: 100%;
+	z-index: 10000;
+}
+
+.front_super_menu {
+	position:relative !important;
+	width: 860px !important;
+	margin-right: auto !important;
+	margin-left: auto !important;
 }
 
 #menu {
 	font-family: 'Tungsten-Medium', serif;
-//	font-family: "futura-pt",sans-serif;
 	font-style: normal;
-//	font-weight: 500;
-	font-size: 48px;
-//	font-size: 36px;
-    margin-top: 66px;
-    width: 100%;
-    height: 54px;
+  font-size: 48px;
+  margin-top: 66px;
+  width: 100%;
+  height: 54px;
 }
 
 #menu a {
@@ -299,7 +294,6 @@ ul.circled li {
 }
 
 #menu a:hover {
-//    color: #ce3229;
 	color: #787674;
 }
 
@@ -381,21 +375,6 @@ nav.front_super_menu a {
     /*width: 100%;*/
 //	text-shadow: 1px 1px 1000px #000000;
 }
-//#frontmenu .inner {
-//    /*margin-left: auto;
-//    margin-right: auto;
-//    margin-top: 150px;
-//    text-align: center;*/
-//    width: 213px;
-//    height: 381px;
-//    overflow: hidden;
-//    margin: auto;
-//    position: absolute;
-//    top: 0; left: 0; bottom: 0; right: 0;
-//	font-size: 36px;
-//	font-weight: 600;
-//	text-align: center;
-//}
 
 #frontmenu .inner {
     width: 1024px;
@@ -807,139 +786,6 @@ nav.front_super_menu a {
     color: #aaa;
 }
 
-.mobile .top .bg {
-    position: relative;
-}
-
-.mobile .top .info {
-    /*width: 118px;
-    height: 233px;
-    overflow: auto;
-    margin: auto;
-    position: absolute;
-    top: 0; left: 0; bottom: 0; right: 0;*/
-}
-
-.mobile .top .info hr {
-    background: white;
-    padding: 0; margin: 0;
-    margin: 14px auto;
-    max-width: 118px;
-}
-
-.mobile .top .info p {
-    font-size: 18px !important;
-}
-
-
-.mobile .top {
-    /*height: 480px;*/
-}
-/*.mobile .top .bg {
-    position: absolute;
-    overflow: hidden;
-}*/
-
-// ### MOBILE TOP ##################################################
-
-.mobile .top .info {
-    position: absolute;
-    overflow: auto;
-    margin: auto;
-    top: 0; left: 0; bottom: 0; right: 0;
-    z-index: 10;
-    width: 100%;
-    height: 50%;
-    text-align: center;
-    color: white;
-//    text-transform: uppercase;
-    font-family: 'Tungsten-Medium', serif;
-	//font-family: "futura-pt",sans-serif;
-	color: #000000;
-	font-size: 48px;
-}
-
-.mobile .top .info p {
-    margin: 0; padding: 0;
-    line-height: 120%;
-    padding-bottom: 10px;
-    font-size: 24px;
-}
-
-.mobile .top .info p.last {
-    padding-bottom: 0;
-}
-
-.mobile .top .info img {
-    /*display: block;
-    width: 118px;
-    margin-left: auto;
-    margin-right: auto;*/
-}
-.mobile .block {
-    width: 100%;
-}
-.mobile .inner {
-    text-align: center;
-}
-.mobile .inner img {
-
-    /*
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    */
-}
-.mobile .inner li {
-    position: relative;
-    margin: 0; padding: 0;
-}
-
-.mobile .inner .work-list li {
-    margin-bottom: 20px;
-}
-
-/*.mobile .inner li a {
-    display: block;
-}*/
-
-.mobile .inner li img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-.mobile .inner .head {
-    padding-top: 20px;
-    padding-bottom: 20px;
-	font-size: 36px;
-}
-.mobile img.thumb.m {
-    /*margin-bottom: 20px;*/
-}
-.mobile .stage {
-}
-.mobile .backstage {
-    padding-bottom: 30px;
-}
-.mobile .production {
-    padding-top: 15px;
-    background-color: #161515;
-}
-.mobile .production p {
-    margin: 0;
-    padding-left: 50px;
-    padding-right: 50px;
-    color: #ccc;
-    text-align: left;
-    font-size: 17px;
-    line-height: 26px;
-}
-.mobile .production .contact {
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
 @media only screen and (max-width: 899px) {
 
     .container.fullsite {
@@ -1264,7 +1110,7 @@ nav#menu ul li ul {
   -moz-transition: opacity 0.2s;
   -ms-transition: opacity 0.2s;
   -o-transition: opacity 0.2s;
-  -transition: opacity 0.2s;
+  transition: opacity 0.2s;
   z-index: 100;
 }
 nav#menu ul li ul li {
@@ -1278,12 +1124,13 @@ nav#menu ul li ul li {
   padding-top: 0;
   padding-bottom: 0;
 }
-nav#menu ul li ul li:hover {
-   color: #ce3229;
-}
 
 li#docs-features, li#docs-features a {
-  color: red !important;
+  color: #ba1937;
+}
+
+nav#menu ul li ul li:hover {
+   color: #ce3229;
 }
 
 nav#menu ul li:hover ul {
@@ -1291,6 +1138,10 @@ nav#menu ul li:hover ul {
   opacity: 0.87;
   visibility: visible;
   z-index: 200;
+}
+
+li#docs-features a:hover {
+  color: #FF0022;
 }
 
 .team_paragraphs {

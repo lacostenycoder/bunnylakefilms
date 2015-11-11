@@ -1,0 +1,110 @@
+.mobile .top .bg {
+    position: relative;
+}
+
+.mobile .top .info {
+}
+
+.mobile .top .info hr {
+    background: white;
+    padding: 0; margin: 0;
+    margin: 14px auto;
+    max-width: 118px;
+}
+
+.mobile .top .info p {
+    font-size: 18px !important;
+}
+
+
+.mobile .top {
+    /*height: 480px;*/
+}
+
+// ### MOBILE TOP ##################################################
+
+.mobile .top .info {
+    position: absolute;
+    overflow: auto;
+    margin: auto;
+    top: 0; left: 0; bottom: 0; right: 0;
+    z-index: 10;
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    color: white;
+//    text-transform: uppercase;
+    font-family: 'Tungsten-Medium', serif;
+	//font-family: "futura-pt",sans-serif;
+	color: #000000;
+	font-size: 48px;
+}
+
+.mobile .top .info p {
+    margin: 0; padding: 0;
+    line-height: 120%;
+    padding-bottom: 10px;
+    font-size: 24px;
+}
+
+.mobile .top .info p.last {
+    padding-bottom: 0;
+}
+
+.mobile .top .info img {
+}
+
+.mobile .block {
+    width: 100%;
+}
+.mobile .inner {
+    text-align: center;
+}
+.mobile .inner img {
+}
+
+.mobile .inner li {
+    position: relative;
+    margin: 0; padding: 0;
+}
+
+.mobile .inner .work-list li {
+    margin-bottom: 20px;
+}
+
+.mobile .inner li img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.mobile .inner .head {
+    padding-top: 20px;
+    padding-bottom: 20px;
+	font-size: 36px;
+}
+.mobile img.thumb.m {
+    /*margin-bottom: 20px;*/
+}
+.mobile .stage {
+}
+.mobile .backstage {
+    padding-bottom: 30px;
+}
+.mobile .production {
+    padding-top: 15px;
+    background-color: #161515;
+}
+.mobile .production p {
+    margin: 0;
+    padding-left: 50px;
+    padding-right: 50px;
+    color: #ccc;
+    text-align: left;
+    font-size: 17px;
+    line-height: 26px;
+}
+.mobile .production .contact {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}

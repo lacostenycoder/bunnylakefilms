@@ -25,7 +25,7 @@
     </div>
     <div class="stage block">
         <div class="inner">
-            <!-- <div class="head">Work</div> -->
+
 			<br><br><br><br><br><br>
 			<h1>WORK</h1>
 
@@ -33,28 +33,19 @@
 			<ul class="work-list">
 			<% Work.where(mobile: true).shuffle.each do |work| %>
 			<% next if work.host_id == 2 %>
+        <!-- hide mobile iframes in dev as killing reload times -->
+        <% if Rails.env == 'production' %>
+  			<li>
+    			<iframe id="video-player" src="//player.vimeo.com/video/<%= work.video_code %>"
+    				width="300px" height="300px" frameborder="0" byline="0" color="ce3229"
+    				title="0" badge="0" autoplay="1"
+    				webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="">
+    			</iframe>
 
-			<li>
-
-			<!-- <iframe id="player" type="text/html" width="100%" height="100%"
-			  src="http://www.youtube.com/embed/<%= work.video_code %>?enablejsapi=1&origin=http://example.com"
-			  frameborder="0"></iframe> -->
-
-			<%# else %>
-
-			<iframe id="video-player" src="//player.vimeo.com/video/<%= work.video_code %>"
-				width="300px" height="300px" frameborder="0" byline="0" color="ce3229"
-				title="0" badge="0" autoplay="1"
-				webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="">
-			</iframe>
-
-			<br>
-
-			<%= work.title %>
-
-			</li>
-
-			<%# end %>
+    			<br>
+    			<%= work.title %>
+  			</li>
+        <% end %>
 			<% end %>
 			</ul>
 
@@ -156,7 +147,7 @@
     <div class="production block">
       <div class="inner">
       <h1 style="color:white">ABOUT</h1>
-      <%= render partial: 'shared/about_content' %>    
+      <%= render partial: 'shared/about_content' %>
       <br>
         <div class="client-list-dark client-list-mobile">
           <%= render partial: 'shared/client_list'  %>

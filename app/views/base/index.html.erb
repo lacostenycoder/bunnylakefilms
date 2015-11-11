@@ -3,82 +3,11 @@
 <div id="container" class="container fullsite">
 
 	<div id="supra_menu">
-		<nav id="menu" class="front_super_menu header">
-			<ul>
-				<!-- <li><%= link_to 'Bunny Lake Films', root_path %></li> -->
-				<li class="up_bump_image"><%= link_to image_tag('bunny_trans_107h.png', width: 231, height: 107), root_path %></li>
-				<!-- <li><%# link_to image_tag('bunny_trans_30_2.png', width: 231, height: 89), root_path %></li> -->
-				<li class="up_bump"><%= link_to 'About', about_path %></li>
-				<li class="up_bump"><%= link_to 'Team', team_path %></li>
-				<li class="up_bump">
-					<%= link_to 'Work', works_path %>
-					<ul>
-						<% all_options = {} %>
-						<% (all_options[:class] = 'selected') unless @category %>
-							<li><%= link_to 'All', works_path, all_options %></li>
-						<% Category.all.each do |cat| %>
-							<% options = {} %>
-							<% (options[:class] = 'selected') if @category and cat == @category %>
-						    <li><%= link_to cat.name, category_works_path(cat), options %></li>
-						<% end %>
-					</ul>
-				</li>
-				<li class="up_bump"><%= link_to 'Contact', contact_path %></li>
-			</ul>
-		</nav>
+		<%= render partial: 'menu' %>
 		<div style="clear:both;"></div>
 	</div>
 
-<style type="text/css" media="screen">
-/*#container {
-    min-height: 100%;
-}
-.header {
-    min-height: 140px;
-    margin-bottom: 20px;
-    background-color: white;
-	opacity: 0.80;
-    background-size: 100% auto;
-    position: relative;
-    z-index: 50;
-    overflow: hidden;
-}
-#content {
-    margin-bottom: 50px;
-    overflow: hidden;
-}*/
-
-#supra_menu {
-	position:absolute !important;
-	left: 0 !important;
-	top: 0 !important;
-	background-color: white;
-	opacity: 0.80;
-	height: 175px !important;
-    margin-top: 0px !important;
-    width: 100%;
-	z-index: 10000;
-}
-
-.front_super_menu {
-	position:relative !important;
-	width: 860px !important;
-	margin-right: auto !important;
-	margin-left: auto !important;
-}
-
-#menu ul {
-/*	opacity: 0.80;*/
-/*	position: relative;
-	text-align: center;
-	width: 500px;
-	margin-right: auto;
-	margin-left: auto;*/
-}
-
-</style>
-
-    <hr>
+  <hr>
 
 	<div class="content" id="home">
 	    <div class="bg-video videowrap">
@@ -118,16 +47,8 @@
 				<div id="front_bg_<%= index %>" class="video-placeholder-img" style="<%= 'display:none;' if index > 0 %>background:url('/system/front_images/<%= image_name %>') no-repeat center 175px fixed; -webkit-background-size: auto 100%;-moz-background-size:auto 100%;-o-background-size: auto 100%;background-size: auto 100%;"></div>
 			<% end %>
 
-			<!-- <video id="home_bg_loop" style="visibility: hidden; opacity: 0" autoplay loop="loop">
-	            <source src="/video/frontpage_loop.mp4" type='video/mp4' />
-	            <source src="/video/frontpage_loop.webm" type='video/webm' />
-	            <source src="/video/frontpage_loop.ogv" type='video/ogg' />
-			</video> -->
-
 		</div>
-
 	</div>
-
 </div>
 
 <%= render partial: 'mobile_index' %>
