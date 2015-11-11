@@ -6,12 +6,13 @@ class Work < ActiveRecord::Base
   belongs_to :category
   belongs_to :work_status
   accepts_nested_attributes_for :category
+  accepts_nested_attributes_for :work_status
 
   after_create :get_vimeo_still
 
   ranks :row_order, :with_same => :category_id
 
-  scope :psa, -> { where(category_id: 2) } 
+  scope :psa, -> { where(category_id: 2) }
 
   HOST_CODES = {
     1 => {:name => :vimeo,    :label => 'Vimeo'},

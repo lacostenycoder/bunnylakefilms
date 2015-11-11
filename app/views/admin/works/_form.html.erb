@@ -20,6 +20,10 @@
   <% selected =  @category ? @category.id : nil %>
   <div class="field"><%= f.collection_select :category_id, Category.all.order(:name), :id, :name, {include_blank: true, selected: selected}, {class: 'select_small_field'} %></div>
 
+  <%= f.label :work_status_id %>
+  <% selected =  @work_status ? @work_status.id : nil %>
+  <div class="field"><%= f.collection_select :work_status_id, WorkStatus.all, :id, :name, {include_blank: true, selected: selected}, {class: 'select_small_field'} %></div>
+
 	<%= f.label :host_id, 'Host' %>
 	<div class="field"><%= f.select :host_id, Work::HOST_CODE_LABELS, {}, class: 'select_small_field' %></div>
 
