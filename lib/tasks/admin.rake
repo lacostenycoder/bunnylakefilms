@@ -1,5 +1,5 @@
 namespace :admin do
-  desc "TODO"
+  desc "ADD NEW VIDEOS TO WORKS"
   task add_videos: :environment do
     array = [
     {
@@ -105,6 +105,15 @@ namespace :admin do
       next unless work.save
     end
 
+  end
+
+  desc "ADD WORK STATUSES TO WORK_STATUS MODEL"
+  task add_work_statuses: :environment do
+    WorkStatus.create!([
+      {name: 'Pre/Production'},
+      {name: 'Post/Production'},
+      {name: 'Completed'}
+    ])
   end
 
 end
