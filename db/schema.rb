@@ -61,7 +61,6 @@ ActiveRecord::Schema.define(version: 20151111082418) do
     t.integer  "row_order"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "status_id"
     t.integer  "work_status_id"
   end
 

@@ -4,9 +4,10 @@ class Work < ActiveRecord::Base
   validates_uniqueness_of [:title, :video_code]
   validates_presence_of [:title, :video_code]
   belongs_to :category
+  belongs_to :work_status
   accepts_nested_attributes_for :category
 
-  before_create :get_vimeo_still
+  after_create :get_vimeo_still
 
   ranks :row_order, :with_same => :category_id
 
@@ -24,7 +25,8 @@ class Work < ActiveRecord::Base
 
   def get_vimeo_still
     return self.still_code if self.still_code
-    self.still_code = lookup_vimeo
+    return if self.host_id = 2
+    self.update_attribute(:still_code, lookup_vimeo)
   end
 
   def lookup_vimeo

@@ -31,6 +31,7 @@ Category.create!([
   {name: "Music", row_order: -1198372},
   {name: "Web Series", row_order: 3595118}
 ])
+
 Work.create!([
   {title: "DIGITAL GRAFFITI", still_code: 436809007, video_code: "65689737", description: "", category_id: 1, host_id: nil, mobile: true, row_order: 0},
   {title: "Body Editions", still_code: 263408433, video_code: "38284909", description: "", category_id: 1, host_id: nil, mobile: true, row_order: -4194303},
