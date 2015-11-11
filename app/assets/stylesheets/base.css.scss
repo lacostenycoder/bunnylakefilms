@@ -356,6 +356,21 @@ ul.circled li {
     overflow: hidden;
 }
 
+.video-sub-name {
+  width: 250px;
+  height: 20px;
+  top: -50px;
+  position: relative;
+  // float: left;
+  text-align: center;
+  background-color: rgba(0, 0, 0, .5);
+  color: #FFF;
+  z-index: 5000;
+  padding: 2px 10px 2px 10px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
 nav.front_super_menu {
 	z-index:10;
 	position:relative;
@@ -597,11 +612,7 @@ nav.front_super_menu a {
     clear: none;
     width: 570px;
 }
-//#production .head .col3 {
-//    float: right;
-//    clear: none;
-//    width: 170px;
-//}
+
 #production .head p {
     font-size: 18px;
     line-height: 18px;
@@ -622,6 +633,16 @@ nav.front_super_menu a {
 	margin-left: auto;
 	width: 500px;
 	text-align: center;
+}
+
+#production p {
+  font-family: "futura-pt",sans-serif;
+  font-size: 14px !important;
+  line-height: 20px !important;
+  text-align: justify;
+  text-justify: inter-word;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 
@@ -1202,6 +1223,8 @@ ul.psa-list li:nth-child(1) {
 	margin-left: auto;
 	width: 600px;
 }
+
+
 
 .card_center {
 	margin-left:auto;
