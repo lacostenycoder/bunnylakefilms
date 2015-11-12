@@ -1146,10 +1146,6 @@ nav#menu ul li ul li {
   padding-bottom: 0;
 }
 
-li#docs-features, li#docs-features a, li.psa-list-li::first-line {
-  color: #ba1937;
-}
-
 nav#menu ul li ul li:hover {
    color: #ce3229;
 }
@@ -1160,6 +1156,11 @@ nav#menu ul li:hover ul {
   visibility: visible;
   z-index: 200;
 }
+
+li#docs-features, li#docs-features a, li.psa-list-li::first-line, li.psa-list-li:first-line > a {
+  color: #ba1937;
+}
+
 
 li#docs-features a:hover, li.psa-list-li::first-line:hover {
   color: #FF0022;
