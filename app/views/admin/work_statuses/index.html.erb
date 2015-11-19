@@ -1,19 +1,13 @@
 <main class="crud-container">
-<h1>Listing work_statuses</h1>
+<h1>Listing Work Statuses</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+<table class="table non-sortable">
+
 
   <tbody>
     <% @work_statuses.each do |work_status| %>
       <tr>
-        <td><%= link_to 'Show', [:admin, work_status] %></td>
+        <td><h3><%= work_status.name %></h3></td>
         <td><%= link_to 'Edit', edit_admin_work_status_path(work_status) %></td>
         <td><%= link_to 'Destroy', [:admin, work_status], method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

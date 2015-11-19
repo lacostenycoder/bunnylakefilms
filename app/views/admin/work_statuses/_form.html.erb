@@ -10,8 +10,13 @@
       </ul>
     </div>
   <% end %>
+  <div class="center">
+    <h3 class="app-headline"><%= controller.action_name.capitalize %></h3>
+    <%= f.label :name %>
+  	<div class="field"><%= f.text_field :name, placeholder: 'Name' %></div>
 
-  <div class="actions">
-    <%= f.submit %>
+    <div class="actions">
+      <%= f.submit class: 'btn-primary'%>
+    </div>
   </div>
 <% end %>

@@ -17,27 +17,16 @@
     </div>
 
     <div class="folio" id="stagethumbs">
-        <div class="thumblist stage clearfix">
-
-			<% @works.each_with_index do |work, index| %>
-
-				<% div_class = "thumb video-thumb" %>
-				<% div_class = "#{div_class} tablet-last" if index.odd? %>
-				<% div_class = "#{div_class} last" if ((index+1)%3).zero? %>
-
-        <div class="<%= div_class %>">
-          <%= link_to work do %>
-          <div class='playarrow'></div>
-          <div class="videowrap">
-            <%= image_tag_from_asset_server(work) %>
-          </div>
-          <div class="video-sub-name">
-            <%= work.title %>
-          </div>
-          <% end %>
-        </div>
-
-			<% end %>
+      <div class="thumblist stage clearfix">
+      <% if @work_status %>
+        <% @works.each_with_index do |work, index| %>
+          <%= render partial: 'work_item_detailed', locals: {work: work, index: index} %>
+        <% end %>
+      <% else %>
+  			<% @works.each_with_index do |work, index| %>
+          <%= render partial: 'work_item', locals: {work: work, index: index} %>
+  			<% end %>
+      <% end  %>
 
         </div>
         <div style="clear:both;"></div>

@@ -15,3 +15,14 @@
  *= require_directory ./admin
  *= require_self
  */
+
+.center .app-headline {
+  text-align: center;
+  padding-left: 33%;
+}
+
+.center .actions {
+  text-align: left;
+  float: left;
+  padding-left: 10%;
+}

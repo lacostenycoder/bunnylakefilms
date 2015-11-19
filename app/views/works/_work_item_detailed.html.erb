@@ -1,0 +1,18 @@
+<% div_class = "thumb video-thumb-description" %>
+<% div_class = "#{div_class} tablet-last" if index.odd? %>
+<% div_class = "#{div_class} last" if ((index+1)%3).zero? %>
+
+<div class="<%= div_class %> clearfix">
+  <%= link_to work do %>
+  <div class='playarrow'></div>
+  <div class="videowrap">
+    <%= image_tag_from_asset_server(work) %>
+
+  </div>
+  <% end %>
+  <div class="video-sub-description">
+    <!-- <h3><%= work.title %></h3> -->
+    <%= work.description %>
+  </div>
+
+</div>

@@ -110,8 +110,8 @@ namespace :admin do
   desc "ADD WORK STATUSES TO WORK_STATUS MODEL"
   task add_work_statuses: :environment do
     WorkStatus.create!([
-      {name: 'Pre/Production'},
-      {name: 'Post/Production'},
+      {name: 'Development'},
+      {name: 'Production/Post'},
       {name: 'Completed'}
     ])
   end
