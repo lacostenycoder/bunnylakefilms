@@ -69,6 +69,6 @@ class Admin::WorkStatusesController < Admin::BaseController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def work_status_params
-      params[:work_status]
+      params.require(:work_status).permit(:name)
     end
 end
