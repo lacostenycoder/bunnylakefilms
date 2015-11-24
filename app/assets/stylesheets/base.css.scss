@@ -799,7 +799,8 @@ nav.front_super_menu a {
 }
 
 .video-thumb-description {
-  height: 256px !important;
+  min-height: 440px !important;
+  overflow: visible;
   background-color: #FFF !important;
   h1, h2, h3, h4, h5, h6 {
     padding: 0;
