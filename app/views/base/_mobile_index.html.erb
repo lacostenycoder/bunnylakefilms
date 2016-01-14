@@ -29,25 +29,9 @@
 			<br><br><br><br><br><br>
 			<h1>WORK</h1>
 
+      <%#= render partial: 'layouts/mobile_iframe' %>
+      <%= render partial: 'layouts/mobile_works' %>
 
-			<ul class="work-list">
-			<% Work.where(mobile: true).shuffle.each do |work| %>
-			<% next if work.host_id == 2 %>
-        <!-- hide mobile iframes in dev as killing reload times -->
-        <% if Rails.env == 'production' %>
-  			<li>
-    			<iframe id="video-player" src="//player.vimeo.com/video/<%= work.video_code %>"
-    				width="300px" height="300px" frameborder="0" byline="0" color="ce3229"
-    				title="0" badge="0" autoplay="1"
-    				webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="">
-    			</iframe>
-
-    			<br>
-    			<%= work.title %>
-  			</li>
-        <% end %>
-			<% end %>
-			</ul>
     </div>
   </div>
 

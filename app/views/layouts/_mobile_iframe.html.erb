@@ -1,0 +1,16 @@
+
+<ul class="work-list">
+<% Work.where(mobile: true).shuffle[0..10].each_with_index do |work, index| %>
+  <% next if work.host_id == 2 || index > 2%>
+  <!-- hide mobile iframes in dev as killing reload times -->
+  <li>
+    <iframe id="video-player" src="//player.vimeo.com/video/<%= work.video_code %>"
+      width="300px" height="300px" frameborder="0" byline="0" color="ce3229"
+      title="0" badge="0" autoplay="1"
+      webkitallowfullscreen mozallowfullscreen allowfullscreen>
+    </iframe>
+    <br>
+    <%= work.title %>
+  </li>
+  <% end %>
+</ul>

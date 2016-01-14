@@ -15,47 +15,6 @@ function initialize()
         _isMobile = true;
     }
 
-    // if( $('body').hasClass('page-backstage') && window.innerWidth > 719)
-    // {
-    //     var currentImageCarouselIndex = 1;
-    //     var imageCarouselMaxCount = $('.image-carousel img').length;
-    //
-    //     setInterval(function()
-    //     {
-    //         $('.image-carousel img').removeClass('opaque');
-    //
-    //         var newImage = currentImageCarouselIndex;
-    //         $('.image-carousel img').eq(newImage).addClass('opaque');
-    //         currentImageCarouselIndex++;
-    //
-    //         if( currentImageCarouselIndex > imageCarouselMaxCount-1 ) currentImageCarouselIndex = 0;
-    //     },3000);
-    // }
-
-    // if( $('body').hasClass('page-stage') && window.innerWidth > 719)
-    // {
-    //     var videoFrameIsOpen = false;
-    //
-    //     $('.video-thumb a').click(function( event )
-    //     {
-    //         event.preventDefault();
-    //
-    //         $('#stagethumbs .video-thumb').removeClass('active');
-    //         $(this).parents('.video-thumb').addClass('active');
-    //
-    //         //$('#video-player').attr('src',$(this).data('src'));
-    //         var id = $(this).attr('href').split("https://vimeo.com/").join('');
-    //         $('#video-player').attr('src','//player.vimeo.com/video/'+id);
-    //
-    //         if( !videoFrameIsOpen )
-    //         {
-    //             videoFrameIsOpen = true;
-    //             $('#videoFrame').addClass('show');
-    //         }
-    //
-    //     });
-    // }
-
     $('a.mail_info').click(function(e) {
         e.preventDefault();
         window.location.href = "mailto:hello@bunnylakefilms.com";
