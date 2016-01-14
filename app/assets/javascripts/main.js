@@ -90,6 +90,8 @@ function initialize()
     {
         // ensure scrolling is enabled
         $("html").css('overflow-y', 'scroll');
+
+				setEventListners();
     }
     //
     resize();
