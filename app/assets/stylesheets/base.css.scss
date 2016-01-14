@@ -819,7 +819,13 @@ nav.front_super_menu a {
     margin: auto;
     position: absolute;
     top: 0; left: 0; bottom: 0; right: 0;
+    transition: background-image 0.3s ease-in-out;
     background-image: image-url('videothumb_play.png');
+}
+
+.playarrow:hover {
+  cursor: pointer;
+  background-image: image-url('videothumb_play_hover.png');
 }
 
 #footer {
