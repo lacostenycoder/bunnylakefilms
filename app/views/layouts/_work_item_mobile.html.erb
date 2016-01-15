@@ -2,7 +2,11 @@
 
   <div class='playarrow'></div>
   <div class="videowrap">
-    <%= image_tag_from_asset_server(work) %>
-    <%= work.title %>
+    <div class="video-img-box">
+      <div class="padded-img">
+        <%= image_tag_from_asset_server(work) %>
+      </div>
+      <%= work.title %>
+    </div>
 
 </div>

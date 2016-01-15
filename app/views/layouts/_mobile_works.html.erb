@@ -1,13 +1,9 @@
 <ul class="work-list">
 <% Work.where(mobile: true).shuffle[0..10].each_with_index do |work, index| %>
 <% next if work.host_id == 2 %>
-  <!-- hide mobile iframes in dev as killing reload times -->
-  <%# if Rails.env == 'production' %>
   <li>
     <%= render partial: 'layouts/work_item_mobile', locals: {work: work, index: index} %>
     <br>
-    <!-- <%= work.title %> -->
   </li>
-  <%# end %>
 <% end %>
 </ul>
