@@ -28,6 +28,7 @@ function mobilePlayer(videoId, title){
   var str = '<iframe id="video-player" src="//player.vimeo.com/video/';
     str += videoId;
     str += '" width="320px" height="320px" frameborder="0" byline="0" color="ce3229" title="0" badge="0" autoplay="1" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>';
-    str += ("<br/>" + title);
+    str += ('<div class="mobile-title">' + title + '</div>');
+    str += "<br/>";
     return str;
 }
