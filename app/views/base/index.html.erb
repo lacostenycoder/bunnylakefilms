@@ -43,7 +43,7 @@
 								'WalterSteding_02.jpg'].shuffle %>
 
 			<% @front_images.each_with_index do |image_name, index| %>
-				<div id="front_bg_<%= index %>" class="video-placeholder-img" style="<%= 'display:none;' if index > 0 %>background:url('/system/front_images/<%= image_name %>') no-repeat center 175px fixed; -webkit-background-size: auto 100%;-moz-background-size:auto 100%;-o-background-size: auto 100%;background-size: auto 100%;"></div>
+				<div id="front_bg_<%= index %>" class="video-placeholder-img front-img" style="<%= 'display:none;' if index > 0 %>background:url('/system/front_images/<%= image_name %>') no-repeat center 175px fixed; -webkit-background-size: 100vw;-moz-background-size:100vw;-o-background-size: 100vw;background-size: 100vw;"></div>
 			<% end %>
 
 		</div>
