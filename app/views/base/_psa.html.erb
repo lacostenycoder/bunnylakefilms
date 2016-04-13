@@ -1,6 +1,6 @@
 <li class="psa-list-li"><%= link_to 'Docs+Features', category_works_path(4), {style: "color: #ba1937;"}  %>
   <ul class="psa-list-ul" id="psa-sub-ul-x">
-    <% WorkStatus.all.each do |ws| %>
+    <% WorkStatus.published.each do |ws| %>
      <li id="psa-list"><%= link_to ws.name, work_status_works_path(ws) %></li>
     <% end %>
   </ul>
