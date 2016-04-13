@@ -2,7 +2,7 @@ class WorkStatus < ActiveRecord::Base
   has_many :works
   accepts_nested_attributes_for :works
 
-  default_scope { order(:row_order).published }
+  default_scope { order(:row_order) }
   
   scope :published, -> { where("name != ?", 'Other') }
   
