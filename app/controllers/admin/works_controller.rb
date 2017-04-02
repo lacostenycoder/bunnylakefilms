@@ -36,6 +36,7 @@ class Admin::WorksController < Admin::BaseController
         format.html { redirect_to admin_works_url, notice: 'Work was successfully created.' }
         format.json { render :show, status: :created, location: @work }
       else
+        flash[:notice] = 'Please check errors and resubmit.'
         format.html { render :new }
         format.json { render json: @work.errors, status: :unprocessable_entity }
       end

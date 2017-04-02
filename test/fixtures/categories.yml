@@ -1,0 +1,16 @@
+art:
+  name: value
+  name: Art + Culture
+  row_order: -7789420
+
+doc:
+  name: Docs + Features
+  row_order: -3595117
+
+fashon:
+  name: Fashion + Beauty
+  row_order: -7489827
+
+music:
+  name: Music
+  row_order: -1198372

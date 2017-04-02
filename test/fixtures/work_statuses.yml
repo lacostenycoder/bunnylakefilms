@@ -1,0 +1,12 @@
+one:
+  name: Completed
+  row_order: 1
+two:
+  name: Production/Post
+  row_order: 2
+three:
+  name: Development
+  row_order: 3
+four:
+  name: Other
+  row_order: nil

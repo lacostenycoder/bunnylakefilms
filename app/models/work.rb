@@ -2,7 +2,9 @@ class Work < ActiveRecord::Base
   include OrderedControl
   include RankedModel
   validates_uniqueness_of [:title, :video_code]
-  validates_presence_of [:title, :video_code]
+  validates_presence_of [:title, :video_code, :category_id]
+  validate :status_for_docs_only
+
   belongs_to :category
   belongs_to :work_status
   accepts_nested_attributes_for :category
@@ -45,6 +47,17 @@ class Work < ActiveRecord::Base
       still_code = nil
     end
     still_code
+  end
+
+  private
+
+  def status_for_docs_only
+    docs = Category.find_by(name: 'Docs + Features')
+    if self.category == docs && self.work_status_id.nil?
+      errors.add(:status, 'status required for documentary')
+    elsif self.category != docs
+      self.work_status_id = nil # remove status for non-documentary
+    end
   end
 
 end
