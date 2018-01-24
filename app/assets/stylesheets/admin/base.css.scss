@@ -264,8 +264,7 @@ header {
 }
 
 .notification-container {
-	width: 150px;
-	margin: 0 auto;
+  margin-left: 80px;
 }
 .approval-notification {
 	position: absolute;
@@ -343,7 +342,7 @@ table {
 }
 
 .btn-primary {
-	background: rgb(64, 64, 64);
+	background: rgb(105, 105, 105);
 	border-radius: 4px;
 	box-shadow: none;
 	font-size: 14px;

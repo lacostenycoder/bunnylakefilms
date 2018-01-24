@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     resources :categories do
       post :update_row_order, on: :member
     end
+    resources :clients
     resources :users
   end
 

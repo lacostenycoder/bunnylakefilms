@@ -1,5 +1,5 @@
 <ul class="circled">
-  <% client_list.each do |client| %>
-    <li><%= client %></li>
+  <% Client.all.each do |client| %>
+    <li><%= client.name %></li>
   <% end %>
 </ul>

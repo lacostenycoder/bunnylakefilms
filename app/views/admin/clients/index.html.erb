@@ -1,0 +1,31 @@
+<main class="crud-container">
+
+<%= link_to 'Add New client', new_admin_client_path, :class => 'new-client-btn btn-primary' %>
+
+  <table class="table non_sortable" data-sortable-table-name="categories" data-sortable-singular-name="client">
+  	<thead>
+  		<tr>
+  			<th>Client Name</th>
+  			<th class="last">&nbsp;</th>
+  		</tr>
+  	</thead>
+
+  	<tbody>
+  		<% @clients.each do |client| %>
+  			<%= content_tag(:tr, class: 'item', data: {'item-id' => client.id}) do %>
+
+  				<td><%= client.name %></td>
+  				<td class="last">
+  					<%= link_to "Edit", edit_admin_client_path(client) %> |
+  					<%= link_to "Delete", admin_client_path(client), :method => :delete, data: {confirm: "Are you sure?"} %>
+  				</td>
+
+  			<% end %>
+  		<% end %>
+  	</tbody>
+
+  </table>
+
+<div class="pag"></div>
+
+</main>
