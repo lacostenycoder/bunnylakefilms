@@ -11,8 +11,9 @@
         <div class="mobile-info-panel-inner">
             <div class="info fl">
                 <div class="info-content">
-                    <p>500 Street Apt 12<br/>
-                        Brooklyn, NY 11211<br/>
+                    <p>
+                        <%=# render partial: 'shared/address' %>
+                        <br/>
                         USA<br/>
                         <a href="tel:+16465555555">+1 646 555 5555</a><br/>
                         <span class="email"><a href="#" class="mail_info">info(*)bunnylakefilms.com</a></span>
@@ -27,8 +28,9 @@
     <div class="cols clearfix">
         <div class="left">
             <div class="inner">
-                <p>153 Roebling Street #3G<br/>
-                    Brooklyn, NY 11211<br/>
+                <p>
+                    <%= render partial: 'shared/address' %>
+                    <br/>
                     USA<br/>
 					<br>
                     <a class="dark_background" href="tel:+16465915278">+1 646 591 5278</a><br/>
