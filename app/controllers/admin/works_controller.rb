@@ -20,10 +20,6 @@ class Admin::WorksController < Admin::BaseController
 
   # GET /admin/works/1/edit
   def edit
-    @category = Category.find(@work.category_id)
-    if @work.work_status_id
-      @work_status = WorkStatus.find(@work.work_status_id)
-    end
   end
 
   # POST /admin/works

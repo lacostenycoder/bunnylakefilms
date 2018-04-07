@@ -14,30 +14,28 @@
 	<h3 class='app-headline'>Work Info</h3>
 
 	<%= f.label :title %>
-	<div class="field"><%= f.text_field :title, placeholder: 'Title' %></div>
+	<%= f.text_field :title, placeholder: 'Title' %>
 
   <%= f.label :category_id %>
-  <% selected =  @category ? @category.id : nil %>
-  <div class="field"><%= f.collection_select :category_id, Category.all.order(:name), :id, :name, {include_blank: true, selected: selected}, {class: 'select_small_field'} %></div>
+  <%= f.collection_select :category_id, Category.all.order(:name), :id, :name, {include_blank: true, selected: @work.category.try(:id)}, {class: 'select_small_field'} %>
 
   <%= f.label :work_status_id %>
-  <% selected =  @work_status ? @work_status.id : nil %>
-  <div class="field"><%= f.collection_select :work_status_id, WorkStatus.all, :id, :name, {include_blank: true, selected: selected}, {class: 'select_small_field'} %></div>
+  <%= collection_select :work_status, :work_status_id, WorkStatus.all.order(:name), :id, :name, {include_blank: true, selected: @work.work_status.try(:id)}, {class: 'select_small_field'} %>
 
 	<%= f.label :host_id, 'Host' %>
-	<div class="field"><%= f.select :host_id, Work::HOST_CODE_LABELS, {}, class: 'select_small_field' %></div>
+	<%= f.select :host_id, Work::HOST_CODE_LABELS, {}, class: 'select_small_field' %>
 
 	<%= f.label :still_code %>
-	<div class="field"><%= f.text_field :still_code, placeholder: 'Still Code (Vimeo only)' %></div>
+	<%= f.text_field :still_code, placeholder: 'Still Code (Vimeo only)' %>
 
 	<%= f.label :video_code %>
-	<div class="field"><%= f.text_field :video_code, placeholder: 'Video Code' %></div>
+	<%= f.text_field :video_code, placeholder: 'Video Code' %>
 
 	<%= f.label :description %>
-	<div class="field"><%= f.text_area :description %></div>
+	<%= f.text_area :description %>
 
 	<%= f.label :mobile %>
-	<div class="field"><%= f.select :mobile, [['On', true], ['Off', false]], {}, class: 'select_small_field' %></div>
+	<%= f.select :mobile, [['On', true], ['Off', false]], {}, class: 'select_small_field' %>
 
 	<div class="actions">
 		<%= f.submit :class => 'btn-primary' %>

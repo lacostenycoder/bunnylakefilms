@@ -1,5 +1,5 @@
 class Category < ActiveRecord::Base
-  include RankedModel
+  # include RankedModel
   has_many :works, :dependent => :destroy, :inverse_of => :category
   accepts_nested_attributes_for :works
 

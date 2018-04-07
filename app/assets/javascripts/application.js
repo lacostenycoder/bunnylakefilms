@@ -12,8 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery-ui/sortable
-//= require jquery-ui/effect-highlight
+//= require jquery-ui
 //= require jquery.lazyloadxt.min
 //= require jquery.lazyloadxt.extra.min
 //= require turbolinks
