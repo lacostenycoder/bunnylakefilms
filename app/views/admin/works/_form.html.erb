@@ -20,7 +20,7 @@
   <%= f.collection_select :category_id, Category.all.order(:name), :id, :name, {include_blank: true, selected: @work.category.try(:id)}, {class: 'select_small_field'} %>
 
   <%= f.label :work_status_id %>
-  <%= collection_select :work_status, :work_status_id, WorkStatus.all.order(:name), :id, :name, {include_blank: true, selected: @work.work_status.try(:id)}, {class: 'select_small_field'} %>
+  <%= f.collection_select :work_status_id, WorkStatus.all.order(:name), :id, :name, {include_blank: true, selected: @work.work_status.try(:id)}, {class: 'select_small_field'} %>
 
 	<%= f.label :host_id, 'Host' %>
 	<%= f.select :host_id, Work::HOST_CODE_LABELS, {}, class: 'select_small_field' %>
