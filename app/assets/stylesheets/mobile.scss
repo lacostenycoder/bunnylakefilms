@@ -146,3 +146,9 @@
       height: 380px;
   }
 }
+
+@media only screen and (max-width: 320px) {
+  .container.mobile .top .bg {
+      height: 440px;
+  }
+}
