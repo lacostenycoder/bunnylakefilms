@@ -1,110 +1,113 @@
 <!-- mobile site -->
 <div class="container mobile">
-    <div class="top">
-        <div class="bg">
-            <div class="info">
-				<%= image_tag('bunny_trans_40.png') %>
-                <!-- Bunny Lake Films -->
+  <div class="top">
+    <div class="bg">
+      <div class="info" id="mobile-info">
+        <%= link_to(:root) do %>
+          <%= image_tag('bunny_trans_40.png') %>
+        <% end %>
+        <!-- Bunny Lake Films -->
+        <hr>
+        <p>Bunny Lake Films<br>
+          <%= render partial: 'shared/address' %>
+        </p>
 
-                <hr>
-
-                <p>Bunny Lake Films<br>
-					<%= render partial: 'shared/address' %>
-				</p>
-
-                <p style="margin-top: 15px;">
-					<a href="tel:+16465915278">Tel 646 591 5278</a>
-				</p>
-                <p class="last">
-					<a href="#" class="mail_info"><%= obfuscated_email %></a>
-				</p>
-                <hr>
-           </div>
-        </div>
-    </div>
-    <div class="stage block">
-      <div class="inner">
-
-			<br><br><br><br><br><br>
-			<h1>WORK</h1>
-
-      <%#= render partial: 'layouts/mobile_iframe' %>
-      <%= render partial: 'layouts/mobile_works' %>
-
+        <p style="margin-top: 15px;">
+          <a href="tel:+16465915278">Tel 646 591 5278</a>
+        </p>
+        <p class="last">
+          <a href="#" class="mail_info"><%= obfuscated_email %></a>
+        </p>
+        <hr>
+      </div>
     </div>
   </div>
 
-    <div class="backstage block">
-        <div class="inner">
-			<br>
-			<h1>TEAM</h1>
-
-            <table class="contact-info">
-                <tbody>
-
-                    <tr>
-                        <td class="contact-icon"></td>
-                        <td class="contact-details">
-                            <ul>
-                                <li><strong>Aviva Wishnow</strong></li>
-                                <li>Producer</li>
-                                <li style="line-height: 0em"><a href="#" class="mail_aviva"><%= obfuscated_email('aviva') %></a></li>
-								<li><br></li>
-                            </ul>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td class="contact-icon"></td>
-                        <td class="contact-details">
-                            <ul>
-                                <li><strong>Celine Danhier</strong></li>
-                                <li>Creative Director &amp; Filmmaker</li>
-                                <li style="line-height: 0em"><a href="#" class="mail_celine"><%= obfuscated_email('celine') %></a></li>
-								<li><br></li>
-                            </ul>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td class="contact-icon"></td>
-                        <td class="contact-details">
-                            <ul>
-                                <li><strong>Rachel Dengiz</strong></li>
-                                <li>Producer &amp; Filmmaker</li>
-                                <li style="line-height: 0em"><a href="#" class="mail_rachel"><%= obfuscated_email('rachel') %></a></li>
-								<li><br></li>
-                            </ul>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td class="contact-icon"></td>
-                        <td class="contact-details">
-                            <ul>
-                                <li><strong>Vanessa Roworth</strong></li>
-                                <li>Editor &amp; Post Supervisor</li>
-                                <li style="line-height: 0em"><a href="#" class="mail_vanessa"><%= obfuscated_email('vanessa') %></a></li>
-								<li><br></li>
-                            </ul>
-                        </td>
-                    </tr>
-
-                </tbody>
-            </table>
-        </div>
+  <div class="stage block">
+    <div class="inner">
+      <% if @work %>
+        <%= render partial: 'work_item_mobile', locals: {work: @work} %>
+      <% else %>
+      <h1>WORK</h1>
+        <%= render partial: 'layouts/mobile_works' %>
+      <% end %>
     </div>
+  </div>
 
+  <!-- BEGIN BACKSTAGE -->
+  <div class="backstage block">
+    <div class="inner">
+      <br>
+      <h1>TEAM</h1>
 
-    <div class="production block">
-      <div class="inner">
+      <table class="contact-info">
+        <tbody>
+
+          <tr>
+            <td class="contact-icon"></td>
+            <td class="contact-details">
+              <ul>
+                <li><strong>Aviva Wishnow</strong></li>
+                <li>Producer</li>
+                <li style="line-height: 0em"><a href="#" class="mail_aviva"><%= obfuscated_email('aviva') %></a></li>
+                <li><br></li>
+              </ul>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="contact-icon"></td>
+            <td class="contact-details">
+              <ul>
+                <li><strong>Celine Danhier</strong></li>
+                <li>Creative Director &amp; Filmmaker</li>
+                <li style="line-height: 0em"><a href="#" class="mail_celine"><%= obfuscated_email('celine') %></a></li>
+                <li><br></li>
+              </ul>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="contact-icon"></td>
+            <td class="contact-details">
+              <ul>
+                <li><strong>Rachel Dengiz</strong></li>
+                <li>Producer &amp; Filmmaker</li>
+                <li style="line-height: 0em"><a href="#" class="mail_rachel"><%= obfuscated_email('rachel') %></a></li>
+                <li><br></li>
+              </ul>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="contact-icon"></td>
+            <td class="contact-details">
+              <ul>
+                <li><strong>Vanessa Roworth</strong></li>
+                <li>Editor &amp; Post Supervisor</li>
+                <li style="line-height: 0em"><a href="#" class="mail_vanessa"><%= obfuscated_email('vanessa') %></a></li>
+                <li><br></li>
+              </ul>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!-- END BACKSTAGE -->
+
+  <!-- BEGIN PRODUCTION BLOCK -->
+  <div class="production block">
+    <div class="inner">
       <h1 style="color:white">ABOUT</h1>
       <%= render partial: 'shared/about_content' %>
       <br>
-        <div class="client-list-dark client-list-mobile">
-          <%= render partial: 'shared/client_list'  %>
-        </div>
+      <div class="client-list-dark client-list-mobile">
+        <%= render partial: 'shared/client_list'  %>
       </div>
     </div>
+  </div>
+  <!-- END PRODUCTION BLOCK -->
 </div>
 <!-- end mobile site -->
