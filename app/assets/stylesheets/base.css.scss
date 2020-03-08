@@ -2,26 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-//@font-face {
-//	font-family: Tungsten-Medium;
-//	src: url("Tungsten-Medium.otf") format("opentype");
-//}
-//
-//@font-face {
-//  font-family: 'Tungsten-Medium';
-//  src: url('GraublauWeb.eot?') format('eot'), url('GraublauWeb.woff') format('woff'), url('GraublauWeb.ttf') format('truetype');
-//}
-
 $play-button-opacity: 0;
-
-@font-face {
-  font-family: 'Tungsten-Medium';
-  src: asset-url('Tungsten-Medium.eot'); /* IE9 Compat Modes */
-  src: asset-url('Tungsten-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       asset-url('Tungsten-Medium.otf') format('opentype'), /* Modern Browsers */
-       asset-url('Tungsten-Medium.ttf')  format('truetype'), /* Safari, Android, iOS */
-       asset-url('Tungsten-Medium.svg#Tungsten-Medium') format('svg'); /* Legacy iOS */
-}
 
 
 /* ==========================================================================
