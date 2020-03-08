@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui
 //= require jquery.lazyloadxt.min
 //= require jquery.lazyloadxt.extra.min
 //= require turbolinks
