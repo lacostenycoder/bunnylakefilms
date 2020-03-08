@@ -1,4 +1,4 @@
-<ul class="work-list">
+<ul class="work-list  <%= @work ? 'hidden' : nil %>">
   <li>
     <div class="thumb video-thumb video-thumb-mobile" data-video-code="<%= work.video_code %>" data-video-title="<%= work.title %>">
       <div class='playarrow'></div>
@@ -12,3 +12,10 @@
     </div>
   </li>
 </ul>
+<% if @work %>
+<script>
+  $(document).ready(function(){
+    $('.playarrow')[0].click()
+  })
+</script>
+<% end %>
