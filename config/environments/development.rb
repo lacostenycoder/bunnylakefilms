@@ -22,10 +22,20 @@ Rails.application.configure do
   # Raise an error on page load if there are pending migrations.
   config.active_record.migration_error = :page_load
 
-  # Debug mode disables concatenation and preprocessing of assets.
-  # This option may cause significant delays in view rendering with a large
-  # number of complex assets.
-  config.assets.debug = true
+  if ENV['PRECOMPILE_ASSETS']
+    config.assets.debug = false
+    config.serve_static_files = true
+    config.assets.compile = false
+    config.assets.digest  = true
+    config.consider_all_requests_local = false
+    config.assets.raise_runtime_errors = false
+    config.assets.js_compressor = Uglifier.new(harmony: true)
+  else
+    config.assets.digest = false
+    config.assets.debug = true
+    config.consider_all_requests_local = true
+    config.assets.raise_runtime_errors = true
+  end
 
   # Adds additional error checking when serving assets at runtime.
   # Checks for improperly declared sprockets dependencies.
