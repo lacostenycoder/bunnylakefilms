@@ -63,20 +63,20 @@ img { display:block; }
 
 @font-face {
 	font-family: 'Optima';
-	src: font-url('optima/optimadisplay-book-webfont.eot');
-	src: font-url('optima/optimadisplay-book-webfont.eot?#iefix') format('embedded-opentype'),
-			 font-url('optima/optimadisplay-book-webfont.woff') format('woff'),
-			 font-url('optima/optimadisplay-book-webfont.ttf') format('truetype'),
-			 font-url('optima/optimadisplay-book-webfont.svg#OptimaBold') format('svg');
+	src: asset_url('optima/optimadisplay-book-webfont.eot');
+	src: asset_url('optima/optimadisplay-book-webfont.eot?#iefix') format('embedded-opentype'),
+			 asset_url('optima/optimadisplay-book-webfont.woff') format('woff'),
+			 asset_url('optima/optimadisplay-book-webfont.ttf') format('truetype'),
+			 asset_url('optima/optimadisplay-book-webfont.svg#OptimaBold') format('svg');
 }
 
 @font-face {
 	font-family: Entypo;
-	src: font-url('entypo/entypo.eot');
-	src: font-url('entypo/entypo.eot?#iefix') format('embedded-opentype'),
-	     font-url('entypo/entypo.woff') format('woff'),
-	     font-url('entypo/entypo.ttf') format('truetype'),
-	     font-url('entypo/entypo.svg#Entypo') format('svg');
+	src: asset_url('entypo/entypo.eot');
+	src: asset_url('entypo/entypo.eot?#iefix') format('embedded-opentype'),
+	     asset_url('entypo/entypo.woff') format('woff'),
+	     asset_url('entypo/entypo.ttf') format('truetype'),
+	     asset_url('entypo/entypo.svg#Entypo') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }

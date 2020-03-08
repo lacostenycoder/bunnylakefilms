@@ -16,11 +16,11 @@ $play-button-opacity: 0;
 
 @font-face {
   font-family: 'Tungsten-Medium';
-  src: font-url('Tungsten-Medium.eot'); /* IE9 Compat Modes */
-  src: font-url('Tungsten-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       font-url('Tungsten-Medium.otf') format('opentype'), /* Modern Browsers */
-       font-url('Tungsten-Medium.ttf')  format('truetype'), /* Safari, Android, iOS */
-       font-url('Tungsten-Medium.svg#Tungsten-Medium') format('svg'); /* Legacy iOS */
+  src: asset_url('Tungsten-Medium.eot'); /* IE9 Compat Modes */
+  src: asset_url('Tungsten-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       asset_url('Tungsten-Medium.otf') format('opentype'), /* Modern Browsers */
+       asset_url('Tungsten-Medium.ttf')  format('truetype'), /* Safari, Android, iOS */
+       asset_url('Tungsten-Medium.svg#Tungsten-Medium') format('svg'); /* Legacy iOS */
 }
 
 
