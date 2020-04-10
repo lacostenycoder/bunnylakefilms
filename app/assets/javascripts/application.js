@@ -15,7 +15,6 @@
 //= require jquery-ui
 //= require jquery.lazyloadxt.min
 //= require jquery.lazyloadxt.extra.min
-//= require turbolinks
 //= require chosen/chosen.jquery
 //= require jquery.cookie
 //= require_tree .
