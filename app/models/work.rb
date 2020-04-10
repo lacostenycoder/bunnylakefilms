@@ -28,28 +28,36 @@ class Work < ActiveRecord::Base
     HOST_CODES[host_id || 1][:label]
   end
 
+  private
+
   def get_vimeo_still
-    return self.still_code if self.still_code
-    return if self.host_id = 2
+    return if still_code || host_id == 2
     self.update_attribute(:still_code, lookup_vimeo)
   end
 
   def lookup_vimeo
-    require 'open-uri'
+    retry_count = 3
+    faraday = -> do
+      begin
+        url ||= "https://vimeo.com/api/oembed.json?url=https%3A//vimeo.com/#{video_code}"
+        Faraday.get url
+      rescue Faraday::Error => err
+        fail "All retries are exhausted" if retry_count == 0
+        retry_count -= 1
+        puts "[#{Time.now}] Oh no, we failed. Retries left: #{retry_count}"
+        sleep 1
+        retry unless retry_count == 0
+      end
+    end.call
+    return unless faraday.status == 200
     begin
-      uri = URI.parse('https://vimeo.com/api/oembed.json?url=https%3A//vimeo.com/' + video_code.to_s)
-      response = open(uri).read
-      hash = JSON.parse(response).to_hash
-      p hash
-      thumb = hash['thumbnail_url']
-      still_code = thumb[(thumb.rindex(/\//)+1)...thumb.index('_')].to_i
-    rescue
-      still_code = nil
+      hash = JSON.parse(faraday.body)
+    rescue JSON::ParserError => e
+      puts e
     end
-    still_code
+    thumb = hash['thumbnail_url']
+    self.still_code = thumb[(thumb.rindex(/\//)+1)...thumb.index('_')].to_i
   end
-
-  private
 
   def status_for_docs_only
     docs = Category.find_by(name: 'Docs + Features')
