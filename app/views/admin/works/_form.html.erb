@@ -25,9 +25,6 @@
 	<%= f.label :host_id, 'Host' %>
 	<%= f.select :host_id, Work::HOST_CODE_LABELS, {}, class: 'select_small_field' %>
 
-	<%= f.label :still_code %>
-	<%= f.text_field :still_code, placeholder: 'Still Code (Vimeo only)' %>
-
 	<%= f.label :video_code %>
 	<%= f.text_field :video_code, placeholder: 'Video Code' %>
 

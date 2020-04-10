@@ -12,11 +12,9 @@
   <% end %>
 
 	<h3 class='app-headline'>Category Info</h3>
-
-	<%= f.label :name %>
-	<div class="field"><%= f.text_field :name, placeholder: 'Name' %></div>
-	<br>
-	<div class="actions">
-		<%= f.submit :class => 'btn-primary' %>
-	</div>
+  <div class="center">
+    <%= f.label :name %>
+	  <%= f.text_field :name, placeholder: 'Name' %>
+    <%= f.submit :class => 'btn-primary' %>
+  </div>
 <% end %>
