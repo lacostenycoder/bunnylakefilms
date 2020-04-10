@@ -24,9 +24,9 @@ Rails.application.routes.draw do
     resources :works
   end
 
-  resources :work_statuses
+  resources :work_statuses, only: [:index, :show]
 
-  resources :works
+  resources :works, only: [:index, :show]
 
   get '/portfolio' => 'base#portfolio'
   get '/team' => 'base#team'

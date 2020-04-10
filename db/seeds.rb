@@ -66,3 +66,5 @@ Work.create!([
   {title: "VERAMEAT Jewelry Holiday Promo", still_code: 503528458, video_code: "115355034", description: "", category_id: 3, host_id: nil, mobile: true, row_order: nil},
   {title: "VOGUE China", still_code: 503530489, video_code: "116985406", description: "Behind the Scenes with Du Juan \r\nFebruary 2015 Issue ", category_id: 3, host_id: nil, mobile: true, row_order: nil}
 ])
+
+%w[Completed Production/Post Development Other].each_with_index{|name, i| WorkStatus.create!(name: name, row_order: i +1) }
