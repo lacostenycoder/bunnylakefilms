@@ -12,16 +12,12 @@
   <% end %>
 
 	<h3 class='app-headline'>User Info</h3>
-
-	<%= f.label :email %>
+  <%= f.label :email %>
 	<div class="field"><%= f.text_field :email, placeholder: 'Email' %></div>
-  
-	<%= f.label :password %>
+  <%= f.label :password %>
 	<div class="field"><%= f.text_field :password, placeholder: 'Password' %></div>
-
-	<br>
-
-	<div class="actions">
+  <br>
+  <div class="actions">
 		<%= f.submit :class => 'btn-primary' %>
 	</div>
 <% end %>
