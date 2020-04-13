@@ -1,0 +1,1914 @@
+/*!
+ * jQuery UI CSS Framework 1.12.1
+ * http://jqueryui.com
+ *
+ * Copyright jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ *
+ * http://api.jqueryui.com/category/theming/
+ *
+ * To view and modify this theme, visit http://jqueryui.com/themeroller/
+ */
+
+/*
+
+
+
+
+
+
+ */
+
+
+
+/* Component containers
+----------------------------------*/
+
+.ui-widget {
+	font-family: Arial,Helvetica,sans-serif/*{ffDefault}*/;
+	font-size: 1em/*{fsDefault}*/;
+}
+.ui-widget .ui-widget {
+	font-size: 1em;
+}
+.ui-widget input,
+.ui-widget select,
+.ui-widget textarea,
+.ui-widget button {
+	font-family: Arial,Helvetica,sans-serif/*{ffDefault}*/;
+	font-size: 1em;
+}
+.ui-widget.ui-widget-content {
+	border: 1px solid #c5c5c5/*{borderColorDefault}*/;
+}
+.ui-widget-content {
+	border: 1px solid #dddddd/*{borderColorContent}*/;
+	background: #ffffff/*{bgColorContent}*/ /*{bgImgUrlContent}*/ /*{bgContentXPos}*/ /*{bgContentYPos}*/ /*{bgContentRepeat}*/;
+	color: #333333/*{fcContent}*/;
+}
+.ui-widget-content a {
+	color: #333333/*{fcContent}*/;
+}
+.ui-widget-header {
+	border: 1px solid #dddddd/*{borderColorHeader}*/;
+	background: #e9e9e9/*{bgColorHeader}*/ /*{bgImgUrlHeader}*/ /*{bgHeaderXPos}*/ /*{bgHeaderYPos}*/ /*{bgHeaderRepeat}*/;
+	color: #333333/*{fcHeader}*/;
+	font-weight: bold;
+}
+.ui-widget-header a {
+	color: #333333/*{fcHeader}*/;
+}
+
+/* Interaction states
+----------------------------------*/
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default,
+.ui-button,
+
+/* We use html here because we need a greater specificity to make sure disabled
+works properly when clicked or hovered */
+html .ui-button.ui-state-disabled:hover,
+html .ui-button.ui-state-disabled:active {
+	border: 1px solid #c5c5c5/*{borderColorDefault}*/;
+	background: #f6f6f6/*{bgColorDefault}*/ /*{bgImgUrlDefault}*/ /*{bgDefaultXPos}*/ /*{bgDefaultYPos}*/ /*{bgDefaultRepeat}*/;
+	font-weight: normal/*{fwDefault}*/;
+	color: #454545/*{fcDefault}*/;
+}
+.ui-state-default a,
+.ui-state-default a:link,
+.ui-state-default a:visited,
+a.ui-button,
+a:link.ui-button,
+a:visited.ui-button,
+.ui-button {
+	color: #454545/*{fcDefault}*/;
+	text-decoration: none;
+}
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus,
+.ui-button:hover,
+.ui-button:focus {
+	border: 1px solid #cccccc/*{borderColorHover}*/;
+	background: #ededed/*{bgColorHover}*/ /*{bgImgUrlHover}*/ /*{bgHoverXPos}*/ /*{bgHoverYPos}*/ /*{bgHoverRepeat}*/;
+	font-weight: normal/*{fwDefault}*/;
+	color: #2b2b2b/*{fcHover}*/;
+}
+.ui-state-hover a,
+.ui-state-hover a:hover,
+.ui-state-hover a:link,
+.ui-state-hover a:visited,
+.ui-state-focus a,
+.ui-state-focus a:hover,
+.ui-state-focus a:link,
+.ui-state-focus a:visited,
+a.ui-button:hover,
+a.ui-button:focus {
+	color: #2b2b2b/*{fcHover}*/;
+	text-decoration: none;
+}
+
+.ui-visual-focus {
+	box-shadow: 0 0 3px 1px rgb(94, 158, 214);
+}
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
+	border: 1px solid #003eff/*{borderColorActive}*/;
+	background: #007fff/*{bgColorActive}*/ /*{bgImgUrlActive}*/ /*{bgActiveXPos}*/ /*{bgActiveYPos}*/ /*{bgActiveRepeat}*/;
+	font-weight: normal/*{fwDefault}*/;
+	color: #ffffff/*{fcActive}*/;
+}
+.ui-icon-background,
+.ui-state-active .ui-icon-background {
+	border: #003eff/*{borderColorActive}*/;
+	background-color: #ffffff/*{fcActive}*/;
+}
+.ui-state-active a,
+.ui-state-active a:link,
+.ui-state-active a:visited {
+	color: #ffffff/*{fcActive}*/;
+	text-decoration: none;
+}
+
+/* Interaction Cues
+----------------------------------*/
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight {
+	border: 1px solid #dad55e/*{borderColorHighlight}*/;
+	background: #fffa90/*{bgColorHighlight}*/ /*{bgImgUrlHighlight}*/ /*{bgHighlightXPos}*/ /*{bgHighlightYPos}*/ /*{bgHighlightRepeat}*/;
+	color: #777620/*{fcHighlight}*/;
+}
+.ui-state-checked {
+	border: 1px solid #dad55e/*{borderColorHighlight}*/;
+	background: #fffa90/*{bgColorHighlight}*/;
+}
+.ui-state-highlight a,
+.ui-widget-content .ui-state-highlight a,
+.ui-widget-header .ui-state-highlight a {
+	color: #777620/*{fcHighlight}*/;
+}
+.ui-state-error,
+.ui-widget-content .ui-state-error,
+.ui-widget-header .ui-state-error {
+	border: 1px solid #f1a899/*{borderColorError}*/;
+	background: #fddfdf/*{bgColorError}*/ /*{bgImgUrlError}*/ /*{bgErrorXPos}*/ /*{bgErrorYPos}*/ /*{bgErrorRepeat}*/;
+	color: #5f3f3f/*{fcError}*/;
+}
+.ui-state-error a,
+.ui-widget-content .ui-state-error a,
+.ui-widget-header .ui-state-error a {
+	color: #5f3f3f/*{fcError}*/;
+}
+.ui-state-error-text,
+.ui-widget-content .ui-state-error-text,
+.ui-widget-header .ui-state-error-text {
+	color: #5f3f3f/*{fcError}*/;
+}
+.ui-priority-primary,
+.ui-widget-content .ui-priority-primary,
+.ui-widget-header .ui-priority-primary {
+	font-weight: bold;
+}
+.ui-priority-secondary,
+.ui-widget-content .ui-priority-secondary,
+.ui-widget-header .ui-priority-secondary {
+	opacity: .7;
+	filter:Alpha(Opacity=70); /* support: IE8 */
+	font-weight: normal;
+}
+.ui-state-disabled,
+.ui-widget-content .ui-state-disabled,
+.ui-widget-header .ui-state-disabled {
+	opacity: .35;
+	filter:Alpha(Opacity=35); /* support: IE8 */
+	background-image: none;
+}
+.ui-state-disabled .ui-icon {
+	filter:Alpha(Opacity=35); /* support: IE8 - See #6059 */
+}
+
+/* Icons
+----------------------------------*/
+
+/* states and images */
+.ui-icon {
+	width: 16px;
+	height: 16px;
+}
+.ui-icon,
+.ui-widget-content .ui-icon {
+	background-image: url(/assets/jquery-ui/ui-icons_444444_256x240.png)/*{iconsContent}*/;
+}
+.ui-widget-header .ui-icon {
+	background-image: url(/assets/jquery-ui/ui-icons_444444_256x240.png)/*{iconsHeader}*/;
+}
+.ui-state-hover .ui-icon,
+.ui-state-focus .ui-icon,
+.ui-button:hover .ui-icon,
+.ui-button:focus .ui-icon {
+	background-image: url(/assets/jquery-ui/ui-icons_555555_256x240.png)/*{iconsHover}*/;
+}
+.ui-state-active .ui-icon,
+.ui-button:active .ui-icon {
+	background-image: url(/assets/jquery-ui/ui-icons_ffffff_256x240.png)/*{iconsActive}*/;
+}
+.ui-state-highlight .ui-icon,
+.ui-button .ui-state-highlight.ui-icon {
+	background-image: url(/assets/jquery-ui/ui-icons_777620_256x240.png)/*{iconsHighlight}*/;
+}
+.ui-state-error .ui-icon,
+.ui-state-error-text .ui-icon {
+	background-image: url(/assets/jquery-ui/ui-icons_cc0000_256x240.png)/*{iconsError}*/;
+}
+.ui-button .ui-icon {
+	background-image: url(/assets/jquery-ui/ui-icons_777777_256x240.png)/*{iconsDefault}*/;
+}
+
+/* positioning */
+.ui-icon-blank { background-position: 16px 16px; }
+.ui-icon-caret-1-n { background-position: 0 0; }
+.ui-icon-caret-1-ne { background-position: -16px 0; }
+.ui-icon-caret-1-e { background-position: -32px 0; }
+.ui-icon-caret-1-se { background-position: -48px 0; }
+.ui-icon-caret-1-s { background-position: -65px 0; }
+.ui-icon-caret-1-sw { background-position: -80px 0; }
+.ui-icon-caret-1-w { background-position: -96px 0; }
+.ui-icon-caret-1-nw { background-position: -112px 0; }
+.ui-icon-caret-2-n-s { background-position: -128px 0; }
+.ui-icon-caret-2-e-w { background-position: -144px 0; }
+.ui-icon-triangle-1-n { background-position: 0 -16px; }
+.ui-icon-triangle-1-ne { background-position: -16px -16px; }
+.ui-icon-triangle-1-e { background-position: -32px -16px; }
+.ui-icon-triangle-1-se { background-position: -48px -16px; }
+.ui-icon-triangle-1-s { background-position: -65px -16px; }
+.ui-icon-triangle-1-sw { background-position: -80px -16px; }
+.ui-icon-triangle-1-w { background-position: -96px -16px; }
+.ui-icon-triangle-1-nw { background-position: -112px -16px; }
+.ui-icon-triangle-2-n-s { background-position: -128px -16px; }
+.ui-icon-triangle-2-e-w { background-position: -144px -16px; }
+.ui-icon-arrow-1-n { background-position: 0 -32px; }
+.ui-icon-arrow-1-ne { background-position: -16px -32px; }
+.ui-icon-arrow-1-e { background-position: -32px -32px; }
+.ui-icon-arrow-1-se { background-position: -48px -32px; }
+.ui-icon-arrow-1-s { background-position: -65px -32px; }
+.ui-icon-arrow-1-sw { background-position: -80px -32px; }
+.ui-icon-arrow-1-w { background-position: -96px -32px; }
+.ui-icon-arrow-1-nw { background-position: -112px -32px; }
+.ui-icon-arrow-2-n-s { background-position: -128px -32px; }
+.ui-icon-arrow-2-ne-sw { background-position: -144px -32px; }
+.ui-icon-arrow-2-e-w { background-position: -160px -32px; }
+.ui-icon-arrow-2-se-nw { background-position: -176px -32px; }
+.ui-icon-arrowstop-1-n { background-position: -192px -32px; }
+.ui-icon-arrowstop-1-e { background-position: -208px -32px; }
+.ui-icon-arrowstop-1-s { background-position: -224px -32px; }
+.ui-icon-arrowstop-1-w { background-position: -240px -32px; }
+.ui-icon-arrowthick-1-n { background-position: 1px -48px; }
+.ui-icon-arrowthick-1-ne { background-position: -16px -48px; }
+.ui-icon-arrowthick-1-e { background-position: -32px -48px; }
+.ui-icon-arrowthick-1-se { background-position: -48px -48px; }
+.ui-icon-arrowthick-1-s { background-position: -64px -48px; }
+.ui-icon-arrowthick-1-sw { background-position: -80px -48px; }
+.ui-icon-arrowthick-1-w { background-position: -96px -48px; }
+.ui-icon-arrowthick-1-nw { background-position: -112px -48px; }
+.ui-icon-arrowthick-2-n-s { background-position: -128px -48px; }
+.ui-icon-arrowthick-2-ne-sw { background-position: -144px -48px; }
+.ui-icon-arrowthick-2-e-w { background-position: -160px -48px; }
+.ui-icon-arrowthick-2-se-nw { background-position: -176px -48px; }
+.ui-icon-arrowthickstop-1-n { background-position: -192px -48px; }
+.ui-icon-arrowthickstop-1-e { background-position: -208px -48px; }
+.ui-icon-arrowthickstop-1-s { background-position: -224px -48px; }
+.ui-icon-arrowthickstop-1-w { background-position: -240px -48px; }
+.ui-icon-arrowreturnthick-1-w { background-position: 0 -64px; }
+.ui-icon-arrowreturnthick-1-n { background-position: -16px -64px; }
+.ui-icon-arrowreturnthick-1-e { background-position: -32px -64px; }
+.ui-icon-arrowreturnthick-1-s { background-position: -48px -64px; }
+.ui-icon-arrowreturn-1-w { background-position: -64px -64px; }
+.ui-icon-arrowreturn-1-n { background-position: -80px -64px; }
+.ui-icon-arrowreturn-1-e { background-position: -96px -64px; }
+.ui-icon-arrowreturn-1-s { background-position: -112px -64px; }
+.ui-icon-arrowrefresh-1-w { background-position: -128px -64px; }
+.ui-icon-arrowrefresh-1-n { background-position: -144px -64px; }
+.ui-icon-arrowrefresh-1-e { background-position: -160px -64px; }
+.ui-icon-arrowrefresh-1-s { background-position: -176px -64px; }
+.ui-icon-arrow-4 { background-position: 0 -80px; }
+.ui-icon-arrow-4-diag { background-position: -16px -80px; }
+.ui-icon-extlink { background-position: -32px -80px; }
+.ui-icon-newwin { background-position: -48px -80px; }
+.ui-icon-refresh { background-position: -64px -80px; }
+.ui-icon-shuffle { background-position: -80px -80px; }
+.ui-icon-transfer-e-w { background-position: -96px -80px; }
+.ui-icon-transferthick-e-w { background-position: -112px -80px; }
+.ui-icon-folder-collapsed { background-position: 0 -96px; }
+.ui-icon-folder-open { background-position: -16px -96px; }
+.ui-icon-document { background-position: -32px -96px; }
+.ui-icon-document-b { background-position: -48px -96px; }
+.ui-icon-note { background-position: -64px -96px; }
+.ui-icon-mail-closed { background-position: -80px -96px; }
+.ui-icon-mail-open { background-position: -96px -96px; }
+.ui-icon-suitcase { background-position: -112px -96px; }
+.ui-icon-comment { background-position: -128px -96px; }
+.ui-icon-person { background-position: -144px -96px; }
+.ui-icon-print { background-position: -160px -96px; }
+.ui-icon-trash { background-position: -176px -96px; }
+.ui-icon-locked { background-position: -192px -96px; }
+.ui-icon-unlocked { background-position: -208px -96px; }
+.ui-icon-bookmark { background-position: -224px -96px; }
+.ui-icon-tag { background-position: -240px -96px; }
+.ui-icon-home { background-position: 0 -112px; }
+.ui-icon-flag { background-position: -16px -112px; }
+.ui-icon-calendar { background-position: -32px -112px; }
+.ui-icon-cart { background-position: -48px -112px; }
+.ui-icon-pencil { background-position: -64px -112px; }
+.ui-icon-clock { background-position: -80px -112px; }
+.ui-icon-disk { background-position: -96px -112px; }
+.ui-icon-calculator { background-position: -112px -112px; }
+.ui-icon-zoomin { background-position: -128px -112px; }
+.ui-icon-zoomout { background-position: -144px -112px; }
+.ui-icon-search { background-position: -160px -112px; }
+.ui-icon-wrench { background-position: -176px -112px; }
+.ui-icon-gear { background-position: -192px -112px; }
+.ui-icon-heart { background-position: -208px -112px; }
+.ui-icon-star { background-position: -224px -112px; }
+.ui-icon-link { background-position: -240px -112px; }
+.ui-icon-cancel { background-position: 0 -128px; }
+.ui-icon-plus { background-position: -16px -128px; }
+.ui-icon-plusthick { background-position: -32px -128px; }
+.ui-icon-minus { background-position: -48px -128px; }
+.ui-icon-minusthick { background-position: -64px -128px; }
+.ui-icon-close { background-position: -80px -128px; }
+.ui-icon-closethick { background-position: -96px -128px; }
+.ui-icon-key { background-position: -112px -128px; }
+.ui-icon-lightbulb { background-position: -128px -128px; }
+.ui-icon-scissors { background-position: -144px -128px; }
+.ui-icon-clipboard { background-position: -160px -128px; }
+.ui-icon-copy { background-position: -176px -128px; }
+.ui-icon-contact { background-position: -192px -128px; }
+.ui-icon-image { background-position: -208px -128px; }
+.ui-icon-video { background-position: -224px -128px; }
+.ui-icon-script { background-position: -240px -128px; }
+.ui-icon-alert { background-position: 0 -144px; }
+.ui-icon-info { background-position: -16px -144px; }
+.ui-icon-notice { background-position: -32px -144px; }
+.ui-icon-help { background-position: -48px -144px; }
+.ui-icon-check { background-position: -64px -144px; }
+.ui-icon-bullet { background-position: -80px -144px; }
+.ui-icon-radio-on { background-position: -96px -144px; }
+.ui-icon-radio-off { background-position: -112px -144px; }
+.ui-icon-pin-w { background-position: -128px -144px; }
+.ui-icon-pin-s { background-position: -144px -144px; }
+.ui-icon-play { background-position: 0 -160px; }
+.ui-icon-pause { background-position: -16px -160px; }
+.ui-icon-seek-next { background-position: -32px -160px; }
+.ui-icon-seek-prev { background-position: -48px -160px; }
+.ui-icon-seek-end { background-position: -64px -160px; }
+.ui-icon-seek-start { background-position: -80px -160px; }
+/* ui-icon-seek-first is deprecated, use ui-icon-seek-start instead */
+.ui-icon-seek-first { background-position: -80px -160px; }
+.ui-icon-stop { background-position: -96px -160px; }
+.ui-icon-eject { background-position: -112px -160px; }
+.ui-icon-volume-off { background-position: -128px -160px; }
+.ui-icon-volume-on { background-position: -144px -160px; }
+.ui-icon-power { background-position: 0 -176px; }
+.ui-icon-signal-diag { background-position: -16px -176px; }
+.ui-icon-signal { background-position: -32px -176px; }
+.ui-icon-battery-0 { background-position: -48px -176px; }
+.ui-icon-battery-1 { background-position: -64px -176px; }
+.ui-icon-battery-2 { background-position: -80px -176px; }
+.ui-icon-battery-3 { background-position: -96px -176px; }
+.ui-icon-circle-plus { background-position: 0 -192px; }
+.ui-icon-circle-minus { background-position: -16px -192px; }
+.ui-icon-circle-close { background-position: -32px -192px; }
+.ui-icon-circle-triangle-e { background-position: -48px -192px; }
+.ui-icon-circle-triangle-s { background-position: -64px -192px; }
+.ui-icon-circle-triangle-w { background-position: -80px -192px; }
+.ui-icon-circle-triangle-n { background-position: -96px -192px; }
+.ui-icon-circle-arrow-e { background-position: -112px -192px; }
+.ui-icon-circle-arrow-s { background-position: -128px -192px; }
+.ui-icon-circle-arrow-w { background-position: -144px -192px; }
+.ui-icon-circle-arrow-n { background-position: -160px -192px; }
+.ui-icon-circle-zoomin { background-position: -176px -192px; }
+.ui-icon-circle-zoomout { background-position: -192px -192px; }
+.ui-icon-circle-check { background-position: -208px -192px; }
+.ui-icon-circlesmall-plus { background-position: 0 -208px; }
+.ui-icon-circlesmall-minus { background-position: -16px -208px; }
+.ui-icon-circlesmall-close { background-position: -32px -208px; }
+.ui-icon-squaresmall-plus { background-position: -48px -208px; }
+.ui-icon-squaresmall-minus { background-position: -64px -208px; }
+.ui-icon-squaresmall-close { background-position: -80px -208px; }
+.ui-icon-grip-dotted-vertical { background-position: 0 -224px; }
+.ui-icon-grip-dotted-horizontal { background-position: -16px -224px; }
+.ui-icon-grip-solid-vertical { background-position: -32px -224px; }
+.ui-icon-grip-solid-horizontal { background-position: -48px -224px; }
+.ui-icon-gripsmall-diagonal-se { background-position: -64px -224px; }
+.ui-icon-grip-diagonal-se { background-position: -80px -224px; }
+
+
+/* Misc visuals
+----------------------------------*/
+
+/* Corner radius */
+.ui-corner-all,
+.ui-corner-top,
+.ui-corner-left,
+.ui-corner-tl {
+	border-top-left-radius: 3px/*{cornerRadius}*/;
+}
+.ui-corner-all,
+.ui-corner-top,
+.ui-corner-right,
+.ui-corner-tr {
+	border-top-right-radius: 3px/*{cornerRadius}*/;
+}
+.ui-corner-all,
+.ui-corner-bottom,
+.ui-corner-left,
+.ui-corner-bl {
+	border-bottom-left-radius: 3px/*{cornerRadius}*/;
+}
+.ui-corner-all,
+.ui-corner-bottom,
+.ui-corner-right,
+.ui-corner-br {
+	border-bottom-right-radius: 3px/*{cornerRadius}*/;
+}
+
+/* Overlays */
+.ui-widget-overlay {
+	background: #aaaaaa/*{bgColorOverlay}*/ /*{bgImgUrlOverlay}*/ /*{bgOverlayXPos}*/ /*{bgOverlayYPos}*/ /*{bgOverlayRepeat}*/;
+	opacity: .3/*{opacityOverlay}*/;
+	filter: Alpha(Opacity=30)/*{opacityFilterOverlay}*/; /* support: IE8 */
+}
+.ui-widget-shadow {
+	-webkit-box-shadow: 0/*{offsetLeftShadow}*/ 0/*{offsetTopShadow}*/ 5px/*{thicknessShadow}*/ #666666/*{bgColorShadow}*/;
+	box-shadow: 0/*{offsetLeftShadow}*/ 0/*{offsetTopShadow}*/ 5px/*{thicknessShadow}*/ #666666/*{bgColorShadow}*/;
+}
+/*!
+ * jQuery UI Sortable 1.12.1
+ * http://jqueryui.com
+ *
+ * Copyright jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ */
+/*
+
+ */
+
+.ui-sortable-handle {
+	-ms-touch-action: none;
+	touch-action: none;
+}
+/* @group Base */
+/* line 3, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-container {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 13px;
+  zoom: 1;
+  *display: inline;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+/* line 14, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-container .chosen-drop {
+  position: absolute;
+  top: 100%;
+  left: -9999px;
+  z-index: 1010;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid #aaa;
+  border-top: 0;
+  background: #fff;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
+}
+
+/* line 28, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-container.chosen-with-drop .chosen-drop {
+  left: 0;
+}
+
+/* line 31, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-container a {
+  cursor: pointer;
+}
+
+/* @end */
+/* @group Single Chosen */
+/* line 37, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-container-single .chosen-single {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  padding: 0 0 0 8px;
+  height: 23px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  background-color: #fff;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(20%, white), color-stop(50%, #f6f6f6), color-stop(52%, #eeeeee), color-stop(100%, #f4f4f4));
+  background: -webkit-linear-gradient(top, white 20%, #f6f6f6 50%, #eeeeee 52%, #f4f4f4 100%);
+  background: -moz-linear-gradient(top, white 20%, #f6f6f6 50%, #eeeeee 52%, #f4f4f4 100%);
+  background: -o-linear-gradient(top, white 20%, #f6f6f6 50%, #eeeeee 52%, #f4f4f4 100%);
+  background: linear-gradient(top, white 20%, #f6f6f6 50%, #eeeeee 52%, #f4f4f4 100%);
+  background-clip: padding-box;
+  box-shadow: 0 0 3px white inset, 0 1px 1px rgba(0, 0, 0, 0.1);
+  color: #444;
+  text-decoration: none;
+  white-space: nowrap;
+  line-height: 24px;
+}
+
+/* line 58, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-container-single .chosen-default {
+  color: #999;
+}
+
+/* line 61, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-container-single .chosen-single span {
+  display: block;
+  overflow: hidden;
+  margin-right: 26px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* line 68, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-container-single .chosen-single-with-deselect span {
+  margin-right: 38px;
+}
+
+/* line 71, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-container-single .chosen-single abbr {
+  position: absolute;
+  top: 6px;
+  right: 26px;
+  display: block;
+  width: 12px;
+  height: 12px;
+  background: url(/assets/chosen-sprite.png) -42px 1px no-repeat;
+  font-size: 1px;
+}
+
+/* line 81, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-container-single .chosen-single abbr:hover {
+  background-position: -42px -10px;
+}
+
+/* line 84, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-container-single.chosen-disabled .chosen-single abbr:hover {
+  background-position: -42px -10px;
+}
+
+/* line 87, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-container-single .chosen-single div {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 18px;
+  height: 100%;
+}
+
+/* line 95, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-container-single .chosen-single div b {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url(/assets/chosen-sprite.png) no-repeat 0px 2px;
+}
+
+/* line 101, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-container-single .chosen-search {
+  position: relative;
+  z-index: 1010;
+  margin: 0;
+  padding: 3px 4px;
+  white-space: nowrap;
+}
+
+/* line 108, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-container-single .chosen-search input[type="text"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 1px 0;
+  padding: 4px 20px 4px 5px;
+  width: 100%;
+  height: auto;
+  outline: 0;
+  border: 1px solid #aaa;
+  background: white url(/assets/chosen-sprite.png) no-repeat 100% -20px;
+  background: url(/assets/chosen-sprite.png) no-repeat 100% -20px, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(1%, #eeeeee), color-stop(15%, white));
+  background: url(/assets/chosen-sprite.png) no-repeat 100% -20px, -webkit-linear-gradient(#eeeeee 1%, white 15%);
+  background: url(/assets/chosen-sprite.png) no-repeat 100% -20px, -moz-linear-gradient(#eeeeee 1%, white 15%);
+  background: url(/assets/chosen-sprite.png) no-repeat 100% -20px, -o-linear-gradient(#eeeeee 1%, white 15%);
+  background: url(/assets/chosen-sprite.png) no-repeat 100% -20px, linear-gradient(#eeeeee 1%, white 15%);
+  font-size: 1em;
+  font-family: sans-serif;
+  line-height: normal;
+  border-radius: 0;
+}
+
+/* line 129, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-container-single .chosen-drop {
+  margin-top: -1px;
+  border-radius: 0 0 4px 4px;
+  background-clip: padding-box;
+}
+
+/* line 134, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-container-single.chosen-container-single-nosearch .chosen-search {
+  position: absolute;
+  left: -9999px;
+}
+
+/* @end */
+/* @group Results */
+/* line 141, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-container .chosen-results {
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin: 0 4px 4px 0;
+  padding: 0 0 0 4px;
+  max-height: 240px;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* line 150, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-container .chosen-results li {
+  display: none;
+  margin: 0;
+  padding: 5px 6px;
+  list-style: none;
+  line-height: 15px;
+}
+
+/* line 157, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-container .chosen-results li.active-result {
+  display: list-item;
+  cursor: pointer;
+}
+
+/* line 161, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-container .chosen-results li.disabled-result {
+  display: list-item;
+  color: #ccc;
+  cursor: default;
+}
+
+/* line 166, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-container .chosen-results li.highlighted {
+  background-color: #3875d7;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(20%, #3875d7), color-stop(90%, #2a62bc));
+  background-image: -webkit-linear-gradient(#3875d7 20%, #2a62bc 90%);
+  background-image: -moz-linear-gradient(#3875d7 20%, #2a62bc 90%);
+  background-image: -o-linear-gradient(#3875d7 20%, #2a62bc 90%);
+  background-image: linear-gradient(#3875d7 20%, #2a62bc 90%);
+  color: #fff;
+}
+
+/* line 175, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-container .chosen-results li.no-results {
+  display: list-item;
+  background: #f4f4f4;
+}
+
+/* line 179, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-container .chosen-results li.group-result {
+  display: list-item;
+  font-weight: bold;
+  cursor: default;
+}
+
+/* line 184, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-container .chosen-results li.group-option {
+  padding-left: 15px;
+}
+
+/* line 187, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-container .chosen-results li em {
+  font-style: normal;
+  text-decoration: underline;
+}
+
+/* @end */
+/* @group Multi Chosen */
+/* line 194, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-container-multi .chosen-choices {
+  position: relative;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto !important;
+  height: 1%;
+  border: 1px solid #aaa;
+  background-color: #fff;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(1%, #eeeeee), color-stop(15%, white));
+  background-image: -webkit-linear-gradient(#eeeeee 1%, white 15%);
+  background-image: -moz-linear-gradient(#eeeeee 1%, white 15%);
+  background-image: -o-linear-gradient(#eeeeee 1%, white 15%);
+  background-image: linear-gradient(#eeeeee 1%, white 15%);
+  cursor: text;
+}
+
+/* line 214, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-container-multi .chosen-choices li {
+  float: left;
+  list-style: none;
+}
+
+/* line 218, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-container-multi .chosen-choices li.search-field {
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+/* line 223, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-container-multi .chosen-choices li.search-field input[type="text"] {
+  margin: 1px 0;
+  padding: 5px;
+  height: 15px;
+  outline: 0;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none;
+  color: #666;
+  font-size: 100%;
+  font-family: sans-serif;
+  line-height: normal;
+  border-radius: 0;
+}
+
+/* line 237, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-container-multi .chosen-choices li.search-field .default {
+  color: #999;
+}
+
+/* line 240, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-container-multi .chosen-choices li.search-choice {
+  position: relative;
+  margin: 3px 0 3px 5px;
+  padding: 3px 20px 3px 5px;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  background-color: #e4e4e4;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(20%, #f4f4f4), color-stop(50%, #f0f0f0), color-stop(52%, #e8e8e8), color-stop(100%, #eeeeee));
+  background-image: -webkit-linear-gradient(#f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
+  background-image: -moz-linear-gradient(#f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
+  background-image: -o-linear-gradient(#f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
+  background-image: linear-gradient(#f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
+  background-clip: padding-box;
+  box-shadow: 0 0 2px white inset, 0 1px 0 rgba(0, 0, 0, 0.05);
+  color: #333;
+  line-height: 13px;
+  cursor: default;
+}
+
+/* line 258, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-container-multi .chosen-choices li.search-choice .search-choice-close {
+  position: absolute;
+  top: 4px;
+  right: 3px;
+  display: block;
+  width: 12px;
+  height: 12px;
+  background: url(/assets/chosen-sprite.png) -42px 1px no-repeat;
+  font-size: 1px;
+}
+
+/* line 268, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-container-multi .chosen-choices li.search-choice .search-choice-close:hover {
+  background-position: -42px -10px;
+}
+
+/* line 271, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-container-multi .chosen-choices li.search-choice-disabled {
+  padding-right: 5px;
+  border: 1px solid #ccc;
+  background-color: #e4e4e4;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(20%, #f4f4f4), color-stop(50%, #f0f0f0), color-stop(52%, #e8e8e8), color-stop(100%, #eeeeee));
+  background-image: -webkit-linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
+  background-image: -moz-linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
+  background-image: -o-linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
+  background-image: linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eeeeee 100%);
+  color: #666;
+}
+
+/* line 282, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-container-multi .chosen-choices li.search-choice-focus {
+  background: #d4d4d4;
+}
+
+/* line 285, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-container-multi .chosen-choices li.search-choice-focus .search-choice-close {
+  background-position: -42px -10px;
+}
+
+/* line 288, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-container-multi .chosen-results {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 292, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-container-multi .chosen-drop .result-selected {
+  display: list-item;
+  color: #ccc;
+  cursor: default;
+}
+
+/* @end */
+/* @group Active  */
+/* line 300, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-container-active .chosen-single {
+  border: 1px solid #5897fb;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* line 304, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-container-active.chosen-with-drop .chosen-single {
+  border: 1px solid #aaa;
+  -moz-border-radius-bottomright: 0;
+  border-bottom-right-radius: 0;
+  -moz-border-radius-bottomleft: 0;
+  border-bottom-left-radius: 0;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(20%, #eeeeee), color-stop(80%, white));
+  background-image: -webkit-linear-gradient(#eeeeee 20%, white 80%);
+  background-image: -moz-linear-gradient(#eeeeee 20%, white 80%);
+  background-image: -o-linear-gradient(#eeeeee 20%, white 80%);
+  background-image: linear-gradient(#eeeeee 20%, white 80%);
+  box-shadow: 0 1px 0 #fff inset;
+}
+
+/* line 317, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-container-active.chosen-with-drop .chosen-single div {
+  border-left: none;
+  background: transparent;
+}
+
+/* line 321, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-container-active.chosen-with-drop .chosen-single div b {
+  background-position: -18px 2px;
+}
+
+/* line 324, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-container-active .chosen-choices {
+  border: 1px solid #5897fb;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* line 328, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-container-active .chosen-choices li.search-field input[type="text"] {
+  color: #111 !important;
+}
+
+/* @end */
+/* @group Disabled Support */
+/* line 334, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-disabled {
+  opacity: 0.5 !important;
+  cursor: default;
+}
+
+/* line 338, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-disabled .chosen-single {
+  cursor: default;
+}
+
+/* line 341, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-disabled .chosen-choices .search-choice .search-choice-close {
+  cursor: default;
+}
+
+/* @end */
+/* @group Right to Left */
+/* line 347, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-rtl {
+  text-align: right;
+}
+
+/* line 350, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-rtl .chosen-single {
+  overflow: visible;
+  padding: 0 8px 0 0;
+}
+
+/* line 354, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-rtl .chosen-single span {
+  margin-right: 0;
+  margin-left: 26px;
+  direction: rtl;
+}
+
+/* line 359, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-rtl .chosen-single-with-deselect span {
+  margin-left: 38px;
+}
+
+/* line 362, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-rtl .chosen-single div {
+  right: auto;
+  left: 3px;
+}
+
+/* line 366, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-rtl .chosen-single abbr {
+  right: auto;
+  left: 26px;
+}
+
+/* line 370, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-rtl .chosen-choices li {
+  float: right;
+}
+
+/* line 373, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-rtl .chosen-choices li.search-field input[type="text"] {
+  direction: rtl;
+}
+
+/* line 376, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-rtl .chosen-choices li.search-choice {
+  margin: 3px 5px 3px 0;
+  padding: 3px 5px 3px 19px;
+}
+
+/* line 380, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-rtl .chosen-choices li.search-choice .search-choice-close {
+  right: auto;
+  left: 4px;
+}
+
+/* line 385, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-rtl.chosen-container-single-nosearch .chosen-search,
+.chosen-rtl .chosen-drop {
+  left: 9999px;
+}
+
+/* line 388, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-rtl.chosen-container-single .chosen-results {
+  margin: 0 0 4px 4px;
+  padding: 0 4px 0 0;
+}
+
+/* line 392, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-rtl .chosen-results li.group-option {
+  padding-right: 15px;
+  padding-left: 0;
+}
+
+/* line 396, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-rtl.chosen-container-active.chosen-with-drop .chosen-single div {
+  border-right: none;
+}
+
+/* line 399, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-rtl .chosen-search input[type="text"] {
+  padding: 4px 5px 4px 20px;
+  background: white url(/assets/chosen-sprite.png) no-repeat -30px -20px;
+  background: url(/assets/chosen-sprite.png) no-repeat -30px -20px, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(1%, #eeeeee), color-stop(15%, white));
+  background: url(/assets/chosen-sprite.png) no-repeat -30px -20px, -webkit-linear-gradient(#eeeeee 1%, white 15%);
+  background: url(/assets/chosen-sprite.png) no-repeat -30px -20px, -moz-linear-gradient(#eeeeee 1%, white 15%);
+  background: url(/assets/chosen-sprite.png) no-repeat -30px -20px, -o-linear-gradient(#eeeeee 1%, white 15%);
+  background: url(/assets/chosen-sprite.png) no-repeat -30px -20px, linear-gradient(#eeeeee 1%, white 15%);
+  direction: rtl;
+}
+
+/* line 409, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-rtl.chosen-container-single .chosen-single div b {
+  background-position: 6px 2px;
+}
+
+/* line 412, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+.chosen-rtl.chosen-container-single.chosen-with-drop .chosen-single div b {
+  background-position: -12px 2px;
+}
+
+/* @end */
+/* @group Retina compatibility */
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 144dpi) {
+  /* line 425, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/vendor/assets/stylesheets/chosen/chosen.scss */
+  .chosen-rtl .chosen-search input[type="text"],
+  .chosen-container-single .chosen-single abbr,
+  .chosen-container-single .chosen-single div b,
+  .chosen-container-single .chosen-search input[type="text"],
+  .chosen-container-multi .chosen-choices .search-choice .search-choice-close,
+  .chosen-container .chosen-results-scroll-down span,
+  .chosen-container .chosen-results-scroll-up span {
+    background-image: url(/assets/chosen-sprite.png) !important;
+    background-size: 52px 37px !important;
+    background-repeat: no-repeat !important;
+  }
+}
+/* @end */
+/*
+
+    RESETS by ERSKINE DESIGN
+    VERSION 1.0
+
+    RESET STYLESHEET
+
+*/
+/* line 11, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+body {
+  font-size: 62.5%;
+}
+
+/* line 20, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+/* line 30, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+a {
+  text-decoration: none;
+}
+
+/* remember to define focus styles! */
+/* line 32, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+:focus {
+  outline: 0;
+}
+
+/* line 35, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+body {
+  line-height: 1;
+  background: white;
+}
+
+/* line 39, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+/* line 43, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+/* line 47, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+}
+
+/* line 52, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+}
+
+/* line 55, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+blockquote, q {
+  quotes: "" "";
+}
+
+/* line 58, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+input {
+  vertical-align: middle;
+}
+
+/* line 59, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+img {
+  display: block;
+}
+
+/* ============== */
+/* = TYPOGRAPHY = */
+/* ============== */
+@font-face {
+  font-family: 'Optima';
+  src: url(/optima/optimadisplay-book-webfont.eot);
+  src: url(/optima/optimadisplay-book-webfont.eot?#iefix) format("embedded-opentype"), url(/optima/optimadisplay-book-webfont.woff) format("woff"), url(/optima/optimadisplay-book-webfont.ttf) format("truetype"), url(/optima/optimadisplay-book-webfont.svg#OptimaBold) format("svg");
+}
+
+@font-face {
+  font-family: Entypo;
+  src: url(/entypo/entypo.eot);
+  src: url(/entypo/entypo.eot?#iefix) format("embedded-opentype"), url(/entypo/entypo.woff) format("woff"), url(/entypo/entypo.ttf) format("truetype"), url(/entypo/entypo.svg#Entypo) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 85, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+.entypo_icon {
+  font-family: 'Entypo';
+  font-size: 30px;
+  width: 26px;
+}
+
+/* line 92, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+html,
+body {
+  height: 100%;
+  min-height: 100%;
+}
+
+/* line 97, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+body {
+  background: #161616;
+  background: -webkit-radial(linear, 0 0, 0 100%, from(center), color-stop(0, ellipse), color-stop(0, #373737), to(black));
+  background: -webkit-radial-gradient(center, ellipse cover, #373737 0%, black 100%);
+  background: -moz-radial-gradient(center, ellipse cover, #373737 0%, black 100%);
+  background: -o-radial-gradient(center, ellipse cover, #373737 0%, black 100%);
+  background: radial-gradient(center, ellipse cover, #373737 0%, black 100%);
+  background-size: 100%;
+  background-attachment: fixed;
+  color: #f5d79c;
+  font-family: "myriad-pro", Helvetica, "Helvetica Neue", Arial, sans-serif;
+  font-size: 1em;
+  height: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  width: 100%;
+}
+
+/* line 115, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+p, ol, ul, td {
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 120, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+pre {
+  background-color: #eee;
+  font-size: 11px;
+  padding: 10px;
+}
+
+/* line 126, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+h1 {
+  color: white;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin: 0 20px 20px 20px;
+  text-shadow: 0 7px 12px rgba(170, 173, 178, 0.5);
+}
+
+/* line 135, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+a {
+  color: #ebcd92;
+  text-decoration: none;
+}
+/* line 138, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+a:visited {
+  color: #ebcd92;
+}
+/* line 141, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+a:hover {
+  color: #fff;
+}
+
+/* line 147, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 152, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+#work_status_row_order {
+  width: 160px;
+}
+
+/* line 156, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+#notice.reset-notice {
+  color: green;
+  text-align: center;
+}
+
+/* line 162, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+.field_with_errors {
+  background: none;
+  display: inline;
+  padding: 0;
+}
+/* line 167, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+.field_with_errors input {
+  border: 1px solid red;
+}
+
+/* line 173, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+#error_explanation {
+  background-color: none;
+  border: 2px solid red;
+  margin: 0 auto;
+  margin-top: 30px;
+  padding: 7px;
+  padding-bottom: 0;
+  width: 450px;
+}
+/* line 182, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+#error_explanation h2 {
+  background-color: #c00;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  margin: -7px;
+  margin-bottom: 0px;
+}
+/* line 192, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: none;
+}
+
+/* line 198, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+.error_messages {
+  margin-top: 75px;
+}
+
+/* line 203, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+header {
+  height: 80px;
+  margin: 0 auto;
+  max-width: 1024px;
+  position: relative;
+  top: 0;
+  width: 100%;
+}
+/* line 211, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+header .logo {
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+  top: 54px;
+  width: auto;
+}
+/* line 219, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+header .small-logo {
+  height: auto;
+  left: 5px;
+  position: relative;
+  top: 5px;
+  width: 50px;
+}
+/* line 227, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+header nav {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  z-index: 200;
+}
+/* line 234, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+header nav li {
+  color: #fff;
+  display: inline;
+  font-size: 14px;
+  padding: 2px;
+}
+/* line 241, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+header nav li a:hover {
+  color: #ffe1a6;
+  -webkit-transition: .4s linear;
+  -moz-transition: .4s linear;
+  -ms-transition: .4s linear;
+  -o-transition: .4s linear;
+  transition: .4s linear;
+}
+
+/* line 253, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+.medium-logo {
+  height: auto;
+  top: 15px;
+  width: 65%;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* line 261, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+.home-notification-container {
+  position: relative;
+  width: 1024px;
+  margin: 0 auto;
+}
+
+/* line 267, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+.notification-container {
+  margin-left: 80px;
+}
+
+/* line 270, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+.approval-notification {
+  position: absolute;
+  top: 20px;
+  z-index: 1;
+}
+
+/* line 276, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+.approval-queue {
+  background: rgba(230, 80, 80, 0.8);
+  padding: 3px;
+  border-radius: 35%;
+}
+
+/* line 283, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+.pagination {
+  float: right;
+}
+/* line 286, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+.pagination .page {
+  display: inline-block;
+  text-align: center;
+  padding: 1px;
+}
+/* line 291, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+.pagination .current {
+  background: #404040;
+  border-bottom: 1px solid #f5d79c;
+}
+
+/* line 297, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 301, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+.table {
+  margin-bottom: 18px;
+  width: 100%;
+}
+/* line 305, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+.table th, .table td {
+  border-top: 1px dotted #000;
+  line-height: 18px;
+  padding: 8px;
+  text-align: left;
+}
+/* line 312, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+.table th.borderFix, .table td.borderFix {
+  border-top: 0px dotted #000;
+  border-bottom: 1px dotted #000;
+}
+/* line 317, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+.table th {
+  background: #000;
+  vertical-align: bottom;
+}
+/* line 322, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+.table thead a:link, .table thead a:visited {
+  color: white;
+}
+/* line 326, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+.table td {
+  color: #ffaf74;
+  vertical-align: top;
+}
+/* line 335, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+.table thead:first-child tr th, .table thead:first-child tr td {
+  border-top: 0;
+}
+/* line 339, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+.table tbody + tbody {
+  border-top: 1px solid #ddd;
+}
+
+/* line 345, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+.btn-primary {
+  background: dimgrey;
+  border-radius: 4px;
+  box-shadow: none;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 0;
+  padding: 1.0625em 1.25em;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+/* line 357, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+.btn-primary:hover {
+  color: #f5d79c;
+}
+/* line 361, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+.btn-primary:active {
+  position: relative;
+  top: 1px;
+}
+
+@media screen and (max-width: 600px) {
+  /* line 370, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+  header .logo {
+    width: 90%;
+  }
+}
+/* line 379, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+ul.grid_setup {
+  list-style-type: none;
+  margin-top: 20px;
+}
+
+/* line 384, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+ul.grid_setup li {
+  display: inline-block;
+  padding-right: 5px;
+  padding-bottom: 25px;
+  width: 115px;
+  height: 65px;
+  font-size: 10px;
+  text-align: center;
+}
+
+/* line 394, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+ul.grid_setup.grid_with_buttons li {
+  height: 90px;
+}
+
+/* line 398, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+.keyword_assignment_delete {
+  color: #FF3B30;
+}
+
+/* line 402, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+.alert {
+  position: absolute;
+  top: 50px;
+  background-color: #333;
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* line 412, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+.alert-success {
+  color: #6ae36d;
+}
+
+/* line 416, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/base.css.scss */
+.alert-notice {
+  color: #ff4d4d;
+}
+/* line 8, /Users/eddielawrence23/dev/client/bunnylakefilms/app/assets/stylesheets/admin/crud.css.scss */
+.crud-container {
+  min-height: 100%;
+  margin: 0 auto;
+  max-width: 1024px;
+  position: relative;
+  width: 100%;
+}
+/* line 15, /Users/eddielawrence23/dev/client/bunnylakefilms/app/assets/stylesheets/admin/crud.css.scss */
+.crud-container div.show_crud {
+  font-weight: 200;
+  position: relative;
+  top: 20px;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 24, /Users/eddielawrence23/dev/client/bunnylakefilms/app/assets/stylesheets/admin/crud.css.scss */
+.crud-container .new-user-btn {
+  background: #222222;
+  color: #fff;
+  padding: 4px;
+}
+/* line 29, /Users/eddielawrence23/dev/client/bunnylakefilms/app/assets/stylesheets/admin/crud.css.scss */
+.crud-container .new-user-btn:hover {
+  color: #f5d79c;
+}
+/* line 34, /Users/eddielawrence23/dev/client/bunnylakefilms/app/assets/stylesheets/admin/crud.css.scss */
+.crud-container .table {
+  background: rgba(150, 150, 150, 0.1);
+  position: relative;
+  top: 20px;
+}
+/* line 41, /Users/eddielawrence23/dev/client/bunnylakefilms/app/assets/stylesheets/admin/crud.css.scss */
+.crud-container h1 {
+  font-weight: 200;
+  position: relative;
+  top: 20px;
+}
+/* line 47, /Users/eddielawrence23/dev/client/bunnylakefilms/app/assets/stylesheets/admin/crud.css.scss */
+.crud-container .search-field {
+  background: black;
+  background: rgba(150, 150, 150, 0.1);
+  border: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: white;
+  display: block;
+  font-family: "Helvetica Neue", Helvetica, 'myriad-pro';
+  font-size: 20px;
+  font-weight: 200;
+  height: 34px;
+  margin: 0 auto;
+  text-indent: 40px;
+  width: 50%;
+}
+/* line 63, /Users/eddielawrence23/dev/client/bunnylakefilms/app/assets/stylesheets/admin/crud.css.scss */
+.crud-container .search-icon {
+  color: #7a7a7a;
+  font-size: 38px;
+  position: absolute;
+  left: 26%;
+}
+/* line 70, /Users/eddielawrence23/dev/client/bunnylakefilms/app/assets/stylesheets/admin/crud.css.scss */
+.crud-container .clear-search-field {
+  color: #7a7a7a;
+  font-size: 24px;
+  font-weight: lighter;
+  position: absolute;
+  right: 27%;
+  top: 6px;
+}
+/* line 79, /Users/eddielawrence23/dev/client/bunnylakefilms/app/assets/stylesheets/admin/crud.css.scss */
+.crud-container .pag {
+  height: 20px;
+  padding: 14px 0;
+}
+/* line 84, /Users/eddielawrence23/dev/client/bunnylakefilms/app/assets/stylesheets/admin/crud.css.scss */
+.crud-container h1 {
+  text-align: center;
+}
+/* line 92, /Users/eddielawrence23/dev/client/bunnylakefilms/app/assets/stylesheets/admin/crud.css.scss */
+.crud-container label {
+  display: inline-block;
+  font-family: "Helvetica Neue", Helvetica, "myriad-pro", "brandon-grotesque";
+  font-size: 18px;
+  font-weight: 100;
+  line-height: 28px;
+  text-align: right;
+  width: 35%;
+}
+/* line 102, /Users/eddielawrence23/dev/client/bunnylakefilms/app/assets/stylesheets/admin/crud.css.scss */
+.crud-container dt {
+  float: left;
+  font-family: "Helvetica Neue", Helvetica, "myriad-pro", "brandon-grotesque";
+  font-size: 20px;
+  height: 40px;
+  font-weight: 200;
+  text-align: right;
+  width: 35%;
+}
+/* line 112, /Users/eddielawrence23/dev/client/bunnylakefilms/app/assets/stylesheets/admin/crud.css.scss */
+.crud-container dd {
+  height: 40px;
+  float: left;
+  line-height: 23px;
+  text-indent: 20px;
+  width: 65%;
+}
+/* line 120, /Users/eddielawrence23/dev/client/bunnylakefilms/app/assets/stylesheets/admin/crud.css.scss */
+.crud-container select {
+  display: block;
+  margin-left: 20px;
+}
+/* line 125, /Users/eddielawrence23/dev/client/bunnylakefilms/app/assets/stylesheets/admin/crud.css.scss */
+.crud-container .field {
+  display: inline;
+  width: 65%;
+}
+/* line 130, /Users/eddielawrence23/dev/client/bunnylakefilms/app/assets/stylesheets/admin/crud.css.scss */
+.crud-container #error_explanation {
+  position: relative;
+  top: 20px;
+}
+/* line 135, /Users/eddielawrence23/dev/client/bunnylakefilms/app/assets/stylesheets/admin/crud.css.scss */
+.crud-container .field_with_errors {
+  background: none;
+  display: inline;
+  padding: 0;
+}
+/* line 140, /Users/eddielawrence23/dev/client/bunnylakefilms/app/assets/stylesheets/admin/crud.css.scss */
+.crud-container .field_with_errors input {
+  border: 1px solid red;
+}
+/* line 146, /Users/eddielawrence23/dev/client/bunnylakefilms/app/assets/stylesheets/admin/crud.css.scss */
+.crud-container .actions {
+  clear: both;
+  margin: 0 auto;
+  height: 120px;
+  width: 50%;
+}
+
+/* line 156, /Users/eddielawrence23/dev/client/bunnylakefilms/app/assets/stylesheets/admin/crud.css.scss */
+.approval-request {
+  background: rgba(190, 80, 80, 0.8);
+}
+
+/* line 160, /Users/eddielawrence23/dev/client/bunnylakefilms/app/assets/stylesheets/admin/crud.css.scss */
+.confirm-request {
+  background: rgba(120, 120, 120, 0.8);
+}
+
+/* line 165, /Users/eddielawrence23/dev/client/bunnylakefilms/app/assets/stylesheets/admin/crud.css.scss */
+.edit-crud,
+.new-crud {
+  background: rgba(150, 150, 150, 0.05);
+  min-height: 100%;
+}
+/* line 173, /Users/eddielawrence23/dev/client/bunnylakefilms/app/assets/stylesheets/admin/crud.css.scss */
+.edit-crud .app-headline,
+.new-crud .app-headline {
+  color: white;
+  font-size: 30px;
+  font-weight: 200;
+  position: relative;
+  top: 20px;
+  padding: 30px 0;
+  width: 35%;
+  text-align: right;
+}
+/* line 184, /Users/eddielawrence23/dev/client/bunnylakefilms/app/assets/stylesheets/admin/crud.css.scss */
+.edit-crud input, .edit-crud .destroy_button, .edit-crud textarea,
+.new-crud input,
+.new-crud .destroy_button,
+.new-crud textarea {
+  background: #404040;
+  border: 0;
+  color: white;
+  font-family: "myriad-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 200;
+  height: 25px;
+  margin-left: 20px;
+}
+/* line 195, /Users/eddielawrence23/dev/client/bunnylakefilms/app/assets/stylesheets/admin/crud.css.scss */
+.edit-crud textarea,
+.new-crud textarea {
+  margin-top: 10px;
+  height: 300px;
+  padding-left: 10px;
+  width: 50%;
+}
+/* line 202, /Users/eddielawrence23/dev/client/bunnylakefilms/app/assets/stylesheets/admin/crud.css.scss */
+.edit-crud textarea#media_asset_embed_code,
+.new-crud textarea#media_asset_embed_code {
+  height: 100px;
+}
+/* line 206, /Users/eddielawrence23/dev/client/bunnylakefilms/app/assets/stylesheets/admin/crud.css.scss */
+.edit-crud .chosen-container,
+.new-crud .chosen-container {
+  position: relative;
+  margin-right: 25%;
+  left: 20px;
+}
+/* line 212, /Users/eddielawrence23/dev/client/bunnylakefilms/app/assets/stylesheets/admin/crud.css.scss */
+.edit-crud .chosen-drop,
+.new-crud .chosen-drop {
+  background: #404040;
+  border: 1px solid #969696;
+}
+/* line 217, /Users/eddielawrence23/dev/client/bunnylakefilms/app/assets/stylesheets/admin/crud.css.scss */
+.edit-crud .chosen-container-active.chosen-with-drop .chosen-single,
+.new-crud .chosen-container-active.chosen-with-drop .chosen-single {
+  box-shadow: none;
+  background: #404040;
+}
+/* line 222, /Users/eddielawrence23/dev/client/bunnylakefilms/app/assets/stylesheets/admin/crud.css.scss */
+.edit-crud .chosen-single,
+.new-crud .chosen-single {
+  background: #404040;
+  box-shadow: none;
+  border: 1px solid #969696;
+  color: white;
+}
+/* line 229, /Users/eddielawrence23/dev/client/bunnylakefilms/app/assets/stylesheets/admin/crud.css.scss */
+.edit-crud .chosen-results,
+.new-crud .chosen-results {
+  background: #404040;
+}
+/* line 233, /Users/eddielawrence23/dev/client/bunnylakefilms/app/assets/stylesheets/admin/crud.css.scss */
+.edit-crud .chosen-results li.highlighted,
+.new-crud .chosen-results li.highlighted {
+  background: #969696;
+}
+/* line 239, /Users/eddielawrence23/dev/client/bunnylakefilms/app/assets/stylesheets/admin/crud.css.scss */
+.edit-crud input[type='text'],
+.edit-crud input[type='password'],
+.edit-crud input[type='number'],
+.new-crud input[type='text'],
+.new-crud input[type='password'],
+.new-crud input[type='number'] {
+  text-indent: 10px;
+  width: 30%;
+  margin-right: 25%;
+}
+/* line 245, /Users/eddielawrence23/dev/client/bunnylakefilms/app/assets/stylesheets/admin/crud.css.scss */
+.edit-crud input[type='checkbox'],
+.new-crud input[type='checkbox'] {
+  bottom: 3px;
+  position: relative;
+  margin-right: 35%;
+}
+/* line 251, /Users/eddielawrence23/dev/client/bunnylakefilms/app/assets/stylesheets/admin/crud.css.scss */
+.edit-crud .btn-primary,
+.new-crud .btn-primary {
+  background: #404040;
+  border-radius: 4px;
+  box-shadow: none;
+  box-shadow: 0 5px 0 0 rba(80, 80, 80);
+  float: right;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 0;
+  padding: 3px 6px;
+  position: relative;
+  text-align: center;
+  top: 20px;
+}
+/* line 266, /Users/eddielawrence23/dev/client/bunnylakefilms/app/assets/stylesheets/admin/crud.css.scss */
+.edit-crud .btn-primary:hover,
+.new-crud .btn-primary:hover {
+  color: #f5d79c;
+}
+
+/* line 273, /Users/eddielawrence23/dev/client/bunnylakefilms/app/assets/stylesheets/admin/crud.css.scss */
+.role {
+  color: white !important;
+  font-size: 12px;
+}
+
+/* line 278, /Users/eddielawrence23/dev/client/bunnylakefilms/app/assets/stylesheets/admin/crud.css.scss */
+.user-logo {
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+/* line 285, /Users/eddielawrence23/dev/client/bunnylakefilms/app/assets/stylesheets/admin/crud.css.scss */
+.user_section_logo_drop {
+  margin-top: 50px;
+}
+
+/* line 289, /Users/eddielawrence23/dev/client/bunnylakefilms/app/assets/stylesheets/admin/crud.css.scss */
+.user_registration_logo_drop {
+  margin-top: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 380px;
+}
+
+/* line 296, /Users/eddielawrence23/dev/client/bunnylakefilms/app/assets/stylesheets/admin/crud.css.scss */
+.registration_show {
+  text-align: center;
+}
+/* line 300, /Users/eddielawrence23/dev/client/bunnylakefilms/app/assets/stylesheets/admin/crud.css.scss */
+.registration_show h3 {
+  color: white;
+  font-size: 30px;
+  font-weight: 200;
+  position: relative;
+  top: 20px;
+  padding: 30px 0;
+}
+/* line 308, /Users/eddielawrence23/dev/client/bunnylakefilms/app/assets/stylesheets/admin/crud.css.scss */
+.registration_show p {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+/* line 314, /Users/eddielawrence23/dev/client/bunnylakefilms/app/assets/stylesheets/admin/crud.css.scss */
+.quick-approve-user {
+  font-size: 10px;
+  background: #222222;
+  color: #fff !important;
+  padding: 2px 4px;
+}
+/* line 320, /Users/eddielawrence23/dev/client/bunnylakefilms/app/assets/stylesheets/admin/crud.css.scss */
+.quick-approve-user:hover {
+  color: #f5d79c;
+}
+
+/* line 325, /Users/eddielawrence23/dev/client/bunnylakefilms/app/assets/stylesheets/admin/crud.css.scss */
+label.textarea {
+  vertical-align: top;
+}
+
+/* line 329, /Users/eddielawrence23/dev/client/bunnylakefilms/app/assets/stylesheets/admin/crud.css.scss */
+.edit-new-menu {
+  padding-top: 15px;
+  padding-left: 15px;
+}
+/* line 5, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/drop_menu.css.scss */
+nav ul#ae_drop {
+  text-align: left;
+  display: inline;
+  margin: 0;
+  list-style: none;
+}
+
+/* line 12, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/drop_menu.css.scss */
+nav ul#ae_drop li {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+/* line 23, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/drop_menu.css.scss */
+nav ul#ae_drop li ul {
+  padding: 0;
+  position: absolute;
+  left: 0;
+  width: 150px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transiton: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -ms-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  -transition: opacity 0.2s;
+  z-index: 100;
+}
+
+/* line 42, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/drop_menu.css.scss */
+nav ul#ae_drop li ul li {
+  display: block;
+  color: black;
+  z-index: 100;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-style: italic;
+  background: #000000;
+}
+
+/* line 52, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/drop_menu.css.scss */
+nav ul#ae_drop li ul li a:hover {
+  color: white;
+}
+
+/* line 56, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/drop_menu.css.scss */
+nav ul#ae_drop li:hover ul {
+  display: block;
+  opacity: 0.87;
+  visibility: visible;
+  z-index: 200;
+}
+/* line 4, /Users/eddielawrence23/code/EdwardJacobs/bunnylakefilms/app/assets/stylesheets/admin/works.css.scss */
+.hideMe {
+  color: red;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+
+
+ */
+/* line 20, /Users/eddielawrence23/dev/client/bunnylakefilms/app/assets/stylesheets/admin.css.scss */
+.center .app-headline {
+  text-align: center;
+  padding-left: 33%;
+}
+
+/* line 25, /Users/eddielawrence23/dev/client/bunnylakefilms/app/assets/stylesheets/admin.css.scss */
+.center .actions {
+  text-align: left;
+  float: left;
+  padding-left: 10%;
+}
