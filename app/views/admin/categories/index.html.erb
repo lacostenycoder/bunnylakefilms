@@ -1,27 +1,25 @@
-<main class="crud-container">
 <%= link_to 'Add New Category', new_admin_category_path, :class => 'new-user-btn btn-primary' %>
 
-  <table class="table non-sortable" data-sortable-table-name="categories" data-sortable-singular-name="category">
-  	<thead>
-  		<tr>
-  			<th>Name</th>
-  			<th class="last">&nbsp;</th>
-  		</tr>
-  	</thead>
+<table class="table non-sortable" data-sortable-table-name="categories" data-sortable-singular-name="category">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th class="last">&nbsp;</th>
+		</tr>
+	</thead>
 
-  	<tbody>
-  		<% @categories.each do |category| %>
-  			<%= content_tag(:tr, class: 'item', data: {'item-id' => category.id}) do %>
+	<tbody>
+		<% @categories.each do |category| %>
+			<%= content_tag(:tr, class: 'item', data: {'item-id' => category.id}) do %>
 
-  				<td><%= link_to category.name, edit_admin_category_path(category) %></td>
-  				<td class="last">
-  					<%= link_to "Edit", edit_admin_category_path(category) %> |
-  					<%= link_to "Delete", admin_category_path(category), :method => :delete, data: {confirm: "Are you sure?"} %>
-  				</td>
+				<td><%= link_to category.name, edit_admin_category_path(category) %></td>
+				<td class="last">
+					<%= link_to "Edit", edit_admin_category_path(category) %> |
+					<%= link_to "Delete", admin_category_path(category), :method => :delete, data: {confirm: "Are you sure?"} %>
+				</td>
 
-  			<% end %>
-  		<% end %>
-  	</tbody>
+			<% end %>
+		<% end %>
+	</tbody>
 
-  </table>
-</main>
+</table>
