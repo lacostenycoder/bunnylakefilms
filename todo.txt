@@ -1,6 +1,0 @@
-https://www.digitalocean.com/community/tutorials/how-to-protect-your-server-against-the-meltdown-and-spectre-vulnerabilities
-
-https://www.digitalocean.com/community/tutorials/how-to-update-a-digitalocean-server-s-kernel#setting-up-the-droplet-for-internal-kernel-management
-
-https://www.liquidweb.com/kb/how-to-check-the-kernel-version-in-linux-ubuntu-centos/
-

@@ -1,5 +1,9 @@
 <ul class="circled">
   <% Client.all.each do |client| %>
-    <li><%= client.name %></li>
+    <% if client.name.downcase == "fresh" %>
+      <li><i><%= client.name.downcase %></i></li>
+    <% else %>
+      <li><%= client.name %></li>
+    <% end %>
   <% end %>
 </ul>
