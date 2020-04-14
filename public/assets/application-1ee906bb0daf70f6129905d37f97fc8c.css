@@ -1,0 +1,1689 @@
+/* ==========================================================================
+   Lists
+   ========================================================================== */
+/**
+ * Address margins set differently in IE 6/7.
+ */
+/* line 19, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+dl,
+menu,
+ol,
+ul {
+  margin: 0 0;
+}
+
+/* line 23, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+dd {
+  margin: 0 0 0 40px;
+}
+
+/**
+ * Address paddings set differently in IE 6/7.
+ */
+/* line 33, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+menu,
+ol,
+ul {
+  padding: 0 0 0 40px;
+}
+
+/**
+ * Correct list images handled incorrectly in IE 7.
+ */
+/* line 42, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+
+/* line 47, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+li, ul {
+  list-style: none;
+  list-style-image: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 53, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+li, ul, dl {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 57, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+html {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+/* line 61, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+html, body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+}
+
+/* line 68, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  font-family: 'Tungsten-Medium', serif;
+  font-size: 17px;
+  color: #000000;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 78, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+a {
+  text-decoration: none;
+  color: #000000;
+  -webkit-transition: color 0.2s ease-out;
+  -moz-transition: color 0.2s ease-out;
+  -o-transition: color 0.2s ease-out;
+  transition: color 0.2s ease-out;
+}
+
+/* line 88, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+a.dark_background {
+  color: #fff;
+}
+
+/* line 92, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+a:hover {
+  color: #555;
+}
+
+/* line 97, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+p {
+  font-size: 17px;
+  line-height: 27px;
+}
+
+/* line 101, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+b, strong {
+  font-family: 'Tungsten-Medium', serif;
+  font-weight: bold;
+}
+
+/* line 107, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+img {
+  border-style: none;
+}
+
+/* line 111, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #333;
+  margin: 14px 0;
+  padding: 0;
+}
+
+/* line 125, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.client-list-block ul {
+  display: block;
+}
+
+/* line 129, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.client-list-mobile ul {
+  margin-left: 33.33%;
+  text-align: left;
+}
+
+/* line 134, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.client-list-dark ul li {
+  color: #FFF;
+  text-align: left;
+}
+
+/* line 139, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.list-3-columns {
+  -moz-column-count: 3;
+  -moz-column-gap: 26px;
+  -webkit-column-count: 3;
+  -webkit-column-gap: 26px;
+  column-count: 3;
+  column-gap: 26px;
+}
+
+/* line 148, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+ul.circled li {
+  display: list-item;
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+/* line 154, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.fl {
+  float: left;
+}
+
+/* line 158, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.fr {
+  float: right;
+}
+
+/* line 162, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.mobile-info-panel {
+  display: none;
+  background: #161515;
+  width: 100%;
+  color: white;
+  text-transform: uppercase;
+  font-family: 'Tungsten-Medium', serif;
+  font-size: 21px;
+  margin-bottom: 20px;
+}
+
+/* line 173, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.mobile-info-panel .info {
+  position: relative;
+}
+
+/* line 177, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.mobile-info-panel .info .info-content {
+  margin-top: 50px;
+}
+
+/* line 181, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.mobile-info-panel p {
+  font-size: 21px;
+  margin: 0;
+  padding: 0;
+  line-height: 140%;
+}
+
+/* line 188, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.mobile-info-panel .featuring {
+  border-left: 1px solid #5b5a5a;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* line 194, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.mobile-info-panel .featuring .feat {
+  display: block;
+  padding: 0 0 10px 0;
+}
+
+/* line 199, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.mobile-info-panel .featuring h1 {
+  font-size: 21px;
+  margin: 0;
+  padding: 0 0 20px 0;
+}
+
+/* line 205, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.mobile-info-panel .mobile-info-panel-inner {
+  padding: 20px;
+}
+
+/* line 209, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.page-home {
+  background: white;
+}
+
+/* line 212, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.page-home footer, .page-home .container.fullsite hr {
+  display: none;
+}
+
+/* line 216, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#home_bg_loop {
+  -webkit-transition: opacity .8s ease-out;
+  -moz-transition: opacity .8s ease-out;
+  -o-transition: opacity .8s ease-out;
+  -ms-transition: opacity .8s ease-out;
+  transition: opacity .8s ease-out;
+}
+
+/* line 224, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.head img {
+  width: 100%;
+  height: auto;
+}
+
+/* line 229, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.container.fullsite {
+  width: 860px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 235, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.work_skip_button {
+  font-size: 24px;
+}
+
+/* line 236, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.work_skip_prev {
+  float: left;
+}
+
+/* line 237, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.work_skip_next {
+  float: right;
+}
+
+/* line 239, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.container.mobile {
+  width: 100%;
+  display: none;
+  background: white;
+  margin-top: 0px;
+}
+
+/* line 247, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#supra_menu {
+  position: absolute !important;
+  left: 0 !important;
+  top: 0 !important;
+  background-color: white;
+  opacity: 0.80;
+  height: 175px !important;
+  margin-top: 0px !important;
+  width: 100%;
+  z-index: 10000;
+}
+
+/* line 259, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.front_super_menu {
+  position: relative !important;
+  width: 860px !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+/* line 266, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#menu {
+  font-family: 'Tungsten-Medium', serif;
+  font-style: normal;
+  font-size: 48px;
+  margin-top: 66px;
+  width: 100%;
+  height: 54px;
+}
+
+/* line 275, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#menu a {
+  color: #000000;
+}
+
+/* line 279, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#menu a:hover {
+  color: #787674;
+}
+
+/* line 283, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#menu div, #cat_menu div {
+  margin-right: 25px;
+  float: left;
+  clear: none;
+}
+
+/* line 289, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#cat_menu div {
+  font-size: 24px;
+}
+
+/* line 293, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#cat_menu a.selected {
+  color: #ce3229;
+}
+
+/* line 297, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#menu div.last {
+  margin-right: 0;
+}
+
+/* line 300, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#menu .stage {
+  margin-left: 87px;
+}
+
+/* line 303, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#menu .backstage {
+  margin-left: 45px;
+}
+
+/* line 306, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#menu .production {
+  margin-left: 35px;
+}
+
+/* line 309, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#menu .last {
+  float: right;
+}
+
+/* line 313, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.content {
+  /*width: 100%;*/
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/* line 319, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#home {
+  position: fixed;
+  z-index: 9;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 329, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#home .bg {
+  position: absolute;
+}
+
+/* line 332, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#home .videowrap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  overflow: hidden;
+  padding: 0;
+}
+
+/* line 343, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.show_caption {
+  text-align: left;
+}
+
+/* line 348, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.video-sub-name {
+  width: 252px;
+  height: 20px;
+  top: -51px;
+  position: relative;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #FFF;
+  z-index: 5000;
+  padding: 2px 10px 2px 10px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+/* line 362, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.video-sub-description {
+  position: relative;
+  width: 280px;
+  height: 100px;
+  margin: 0;
+  background-color: #FFF;
+}
+/* line 368, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.video-sub-description p {
+  margin-top: 0;
+  line-height: 14px;
+  font-size: 12px;
+  font-family: "futura-pt",sans-serif;
+  font-weight: 500;
+}
+
+/* line 378, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.video-sub-description {
+  margin-top: -22px;
+}
+
+/* line 382, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+nav.front_super_menu {
+  z-index: 10;
+  position: relative;
+  height: 300px;
+}
+
+/* line 392, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#frontmenu {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  /*position: absolute;*/
+  z-index: 10;
+  /*width: 100%;*/
+}
+
+/* line 402, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#frontmenu .inner {
+  width: 1024px;
+  height: 150px;
+  overflow: hidden;
+  margin: 0 auto;
+  position: absolute;
+  top: 25px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  font-size: 36px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* line 414, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#frontmenu .inner a {
+  color: #ffffff;
+  margin-right: 15px;
+}
+
+/* line 419, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#frontmenu .inner a.super_logo {
+  font-size: 64px;
+}
+
+/* line 424, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#frontmenu .inner a:hover {
+  color: #ce3229;
+}
+
+/* line 428, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#frontmenu .inner .front_logo {
+  font-size: 42px;
+}
+
+/* line 432, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#frontmenu .inner .front_logo a {
+  color: #D3463E !important;
+}
+
+/* line 436, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#frontmenu .hl {
+  width: 188px;
+  margin-left: 12px;
+  padding-bottom: 4px;
+  margin-bottom: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-color: #fff;
+}
+
+/* line 449, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#backstage .head {
+  margin-bottom: 20px;
+}
+
+/*#backstage .cols {
+    height: 950px;
+}*/
+/* line 456, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#backstage .left {
+  float: left;
+  margin-right: 20px;
+  width: 180px;
+  /*height: 930px;*/
+  height: 961px;
+  background-color: #161515;
+  padding-left: 20px;
+  padding-top: 40px;
+}
+
+/* line 466, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#backstage .left p {
+  margin-top: 0;
+  text-transform: uppercase;
+  font-family: 'Tungsten-Medium', serif;
+  /*font-size: 21px;
+  line-height: 34px;*/
+  font-size: 18px;
+  line-height: 27px;
+  -webkit-font-smoothing: antialiased;
+  color: white;
+  /*text-shadow: 0px 0px rgba(255, 255, 255, 0.8);*/
+}
+
+/* line 479, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#backstage .left p .email {
+  font-size: 18px;
+}
+
+/* line 482, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#backstage .left hr {
+  border-top: 1px solid white;
+  margin-top: 40px;
+  margin-right: 20px;
+  margin-bottom: 40px;
+}
+
+/* line 488, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#backstage .left p.feat {
+  line-height: 30px;
+}
+
+/* line 491, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#backstage .left p .star {
+  font-size: 15px;
+  line-height: 15px;
+  display: inline-block;
+  height: 17px;
+  position: relative;
+  top: -2px;
+  margin-right: 1px;
+}
+
+/* line 500, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#backstage .left a.feat {
+  display: inline-block;
+  clear: left;
+  font-family: 'Tungsten-Medium', serif;
+  /*font-size: 13px;*/
+  font-size: 18px;
+  text-transform: uppercase;
+  /*text-transform: uppercase;*/
+  line-height: 10px;
+  position: relative;
+  top: -6px;
+}
+
+/* line 513, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#backstage .right {
+  float: right;
+}
+
+/* line 516, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#backstage .card {
+  width: 540px;
+  padding: 20px;
+  padding-right: 90px;
+  margin-bottom: 20px;
+  border-style: solid;
+  border-color: white;
+  border-width: 1px;
+}
+
+/* line 525, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.card p {
+  margin: 0;
+  margin-bottom: 6px;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+/* line 531, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.card .name {
+  text-transform: uppercase;
+  font-family: 'Tungsten-Medium', serif;
+  font-size: 24px;
+  -webkit-font-smoothing: antialiased;
+  color: #222;
+  /*text-shadow: 0px 0px rgba(0, 0, 0, 0.5);*/
+}
+
+/* line 541, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#videoFrame {
+  width: 860px;
+  height: 0;
+  background: black;
+  margin-bottom: 20px;
+  -webkit-transition: height 1s ease-in-out;
+  -moz-transition: height 1s ease-in-out;
+  -o-transition: height 1s ease-in-out;
+  transition: height 1s ease-in-out;
+}
+
+/* line 553, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#videoFrame.show {
+  height: 484px;
+}
+
+/* line 557, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.image-carousel {
+  position: relative;
+  width: 860px;
+  height: 382px;
+}
+
+/* line 563, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.image-carousel img {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: auto;
+  left: 0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+}
+
+/* line 578, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.image-carousel img.opaque {
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=1);
+}
+
+/* line 586, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#backstage .card.jappe .info {
+  padding-top: 27px;
+}
+
+/* line 591, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#backstage .card.jp .info {
+  padding-top: 27px;
+}
+
+/* line 596, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#backstage .card.pauliina .info {
+  padding-top: 25px;
+}
+
+/* line 601, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#backstage .card.jussi .info {
+  padding-top: 7px;
+}
+
+/* line 604, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#backstage .card img {
+  float: right;
+}
+
+/* line 608, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#production .head {
+  margin-bottom: 50px;
+}
+
+/* line 612, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#production .head .col1 {
+  float: left;
+  clear: none;
+  width: 250px;
+  margin-right: 20px;
+}
+
+/* line 618, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#production .head .col2 {
+  float: left;
+  clear: none;
+  width: 570px;
+}
+
+/* line 624, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#production .head p {
+  font-size: 18px;
+  line-height: 18px;
+  clear: none;
+  margin: 0;
+}
+
+/* line 630, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#production .head .col1 p {
+  font-size: 19px;
+  /*line-height: 30px;*/
+  line-height: 34px;
+}
+
+/* line 635, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#production .head .col2 p {
+  margin-top: 3px;
+  margin-bottom: 8px;
+  font-size: 16px;
+  line-height: 25px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 500px;
+  text-align: center;
+}
+
+/* line 646, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#production p {
+  font-family: "futura-pt",sans-serif;
+  font-size: 14px !important;
+  line-height: 20px !important;
+  text-align: justify;
+  text-justify: inter-word;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* line 658, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.super_about {
+  font-family: "futura-pt",sans-serif;
+  font-size: 14px !important;
+  line-height: 20px !important;
+  text-align: justify;
+  text-justify: inter-word;
+  margin-right: auto;
+  margin-left: auto;
+  width: 600px;
+}
+
+/* line 672, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#production .head .col3 p {
+  margin-top: 10px;
+  margin-left: 3px;
+}
+
+/* line 677, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.folio {
+  margin-bottom: 0px;
+  clear: both;
+}
+
+/* line 682, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.folio .title {
+  /*margin-bottom: 7px;*/
+  margin-bottom: 10px;
+  margin-top: 20px;
+  text-transform: uppercase;
+  font-family: 'Tungsten-Medium', serif;
+  font-size: 23px;
+  -webkit-font-smoothing: antialiased;
+  color: #222;
+  /*text-shadow: 0px 0px rgba(0, 0, 0, 0.5);*/
+}
+
+/* line 695, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.folio .thumb {
+  width: 200px;
+  height: 113px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  margin-top: -2px;
+  background-color: black;
+  float: left;
+  /*clear: none;
+  display: inline-block;
+  */
+}
+
+/* line 708, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.folio .thumb.fullwidth_last {
+  margin-right: 0;
+}
+
+/* line 712, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.folio .last {
+  width: 200px;
+  /*float: none;*/
+  margin-right: 0;
+}
+
+/* line 718, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#stage .folio .last {
+  margin-right: 0px;
+}
+
+/* line 722, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#production .thumb img {
+  width: 200px;
+  height: 113px;
+}
+
+/* line 728, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.folio .stage .thumb {
+  width: 272px;
+  height: 153px;
+  position: relative;
+  /*
+  left: 0;
+  right: 0;
+  */
+}
+
+/* line 737, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.folio .stage .thumb .videowrap {
+  width: 320px;
+  height: 180px;
+  overflow: hidden;
+  -webkit-transform: scale(0.85, 0.85);
+  -webkit-transform-origin: 0 0;
+  transform: scale(0.85, 0.85);
+  transform-origin: 0 0;
+}
+
+/* line 747, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.folio .stage .thumb .playarrow {
+  position: absolute;
+  left: 98px;
+  top: 45px;
+  width: 64px;
+  height: 69px;
+  background-image: url(/assets/videothumb_play.png);
+  z-index: 9000;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  -moz-opacity: 0;
+  -khtml-opacity: 0;
+  opacity: 0;
+  -webkit-transition: opacity .6s ease-out;
+  -moz-transition: opacity .6s ease-out;
+  -o-transition: opacity .6s ease-out;
+  -ms-transition: opacity .6s ease-out;
+  transition: opacity .6s ease-out;
+}
+
+/* line 769, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.folio .stage .thumb .playarrow.show {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=100);
+  -moz-opacity: 1;
+  -khtml-opacity: 1;
+  opacity: 1;
+}
+
+/* line 777, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.video-thumb a {
+  display: block;
+  position: relative;
+}
+
+/* line 782, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.video-thumb-description {
+  min-height: 440px !important;
+  overflow: visible;
+  background-color: #FFF !important;
+}
+/* line 786, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.video-thumb-description h1, .video-thumb-description h2, .video-thumb-description h3, .video-thumb-description h4, .video-thumb-description h5, .video-thumb-description h6 {
+  padding: 0;
+  margin: 0;
+}
+/* line 790, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.video-thumb-description .video-sub-description {
+  padding-top: 2px;
+}
+
+/* line 795, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.mobile .playarrow {
+  position: absolute;
+  width: 64px;
+  height: 69px;
+  overflow: auto;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transition: background-image 0.3s ease-in-out;
+  background-image: url(/assets/videothumb_play.png);
+}
+
+/* line 807, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.playarrow:hover {
+  cursor: pointer;
+  background-image: url(/assets/videothumb_play_hover.png);
+}
+
+/* line 812, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#footer {
+  width: 100%;
+  height: 90px;
+  background-color: #161515;
+}
+
+/* line 817, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#footer .btmstripe {
+  position: relative;
+  top: 86px;
+  width: 100%;
+  height: 4px;
+  background-color: #a7a6a6;
+}
+
+/* line 824, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#footer p {
+  font-family: 'Tungsten-Medium', serif;
+  color: #aaa;
+  font-size: 18px;
+  text-align: center;
+  padding: 14px 10px 0 10px;
+}
+
+/* line 832, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#footer a {
+  color: #aaa;
+}
+
+@media only screen and (max-width: 899px) {
+  /* line 838, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+  .container.fullsite {
+    width: 688px;
+  }
+
+  /* line 842, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+  .mobile-info-panel {
+    display: block;
+  }
+
+  /* line 846, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+  .image-carousel {
+    position: relative;
+    width: 688px;
+    height: 306px;
+  }
+
+  /* line 852, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+  #videoFrame {
+    width: 588px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* line 858, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+  #videoFrame.show {
+    height: 331px;
+  }
+
+  /* line 862, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+  #menu .stage {
+    margin-left: 50px;
+  }
+
+  /* line 865, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+  #menu .backstage {
+    margin-left: 20px;
+  }
+
+  /* line 868, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+  #menu .production {
+    float: right;
+    margin-left: 0px;
+  }
+
+  /* line 872, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+  #menu .last {
+    float: none;
+    position: relative;
+    left: 624px;
+    top: -116px;
+  }
+
+  /* line 878, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+  p {
+    font-size: 15px;
+    line-height: 23px;
+  }
+
+  /* line 882, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+  #production .head img {
+    margin-bottom: 40px;
+  }
+
+  /* line 885, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+  .folio .thumb {
+    margin-right: 44px;
+  }
+
+  /* line 889, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+  .folio .last {
+    margin-right: 0;
+  }
+
+  /* line 893, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+  .folio .thumb.fullwidth_last {
+    margin-right: 44px;
+  }
+
+  /* line 897, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+  .folio .third_col {
+    margin-right: 0 !important;
+  }
+
+  /* line 901, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+  #stage .folio .last {
+    margin-right: 44px;
+  }
+
+  /* line 905, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+  #stagethumbs {
+    width: 588px;
+    margin: 0 auto;
+  }
+
+  /* line 910, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+  #stagethumbs .tablet-last {
+    margin-right: 0 !important;
+  }
+
+  /* line 914, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+  #production .head .col2 {
+    float: right;
+  }
+
+  /* line 918, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+  #production .head .col3 {
+    display: none;
+  }
+
+  /* line 922, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+  #backstage .left {
+    display: none;
+    float: none;
+    height: auto;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  /* line 931, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+  #backstage .left p {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* line 935, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+  #backstage .left hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  /* line 940, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+  #backstage .left .inner {
+    padding: 20px;
+  }
+
+  /* line 944, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+  #backstage .right {
+    float: none;
+  }
+
+  /* line 948, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+  #backstage .right .card {
+    width: auto;
+  }
+}
+@media only screen and (max-width: 719px) {
+  /* line 954, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+  .container.fullsite {
+    display: none;
+  }
+
+  /* line 957, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+  .container.mobile {
+    display: block;
+  }
+
+  /* line 961, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+  .not-mobile {
+    display: none;
+  }
+
+  /* line 965, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+  #footer p {
+    font-size: 16px;
+  }
+}
+/* line 970, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.container.mobile .top .bg {
+  background: url(/assets/header-mobile-large.jpg) no-repeat center;
+  width: auto;
+  height: 959px;
+}
+
+@media only screen and (max-width: 500px) {
+  /* line 977, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+  .container.mobile .top .bg {
+    background: url(/assets/header-mobile-medium.jpg) no-repeat center;
+    height: 667px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  /* line 984, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+  .container.mobile .top .bg {
+    background: url(/assets/header-mobile-small.jpg) no-repeat center;
+    height: 427px;
+  }
+
+  /* line 989, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+  .mobile .top .info {
+    height: 100%;
+    margin-top: 60px !important;
+  }
+}
+/* line 996, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+/* line 1001, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 1005, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.clearfix {
+  *zoom: 1;
+}
+
+/* line 1009, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.container.mobile .contact-info {
+  text-align: left;
+}
+
+/* line 1013, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.container.mobile .contact-info a {
+  display: block;
+  padding-top: 10px;
+}
+
+/* line 1018, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.container.mobile .contact-info {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+/* line 1024, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.container.mobile .contact-info .contact-icon {
+  width: 30%;
+  text-align: center;
+  padding-left: 10px;
+}
+
+/* line 1030, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.container.mobile .contact-info .contact-details {
+  width: 70%;
+}
+
+/* line 1034, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.container.mobile .contact-info .contact-details ul {
+  padding-bottom: 27px;
+}
+
+/* line 1038, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.container.mobile .contact-info dd {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 26px;
+}
+
+/* line 1043, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.container.mobile .contact-info td {
+  vertical-align: top;
+}
+
+/* line 1047, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.container.mobile .contact-info td {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 1052, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.container.mobile .contact-info .sub-title {
+  text-transform: uppercase;
+}
+
+/* line 1056, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.sprite {
+  display: inline-block;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-image: url(sprite.png);
+}
+
+/* line 1058, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#menu .home a {
+  width: 128px;
+  height: 50px;
+  background-position: -2px -106px;
+}
+
+/* line 1062, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#menu .home a:hover {
+  color: #ce3229;
+}
+
+/* line 1066, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#menu .stage a {
+  width: 69px;
+  height: 50px;
+  background-position: -132px -106px;
+}
+
+/* line 1070, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#menu .stage a:hover, .page-stage #menu .stage a {
+  width: 69px;
+  height: 50px;
+  background-position: -203px -106px;
+}
+
+/* line 1074, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#menu .backstage a {
+  width: 157px;
+  height: 50px;
+  background-position: -241px -2px;
+}
+
+/* line 1078, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#menu .backstage a:hover, .page-backstage #menu .backstage a {
+  width: 157px;
+  height: 50px;
+  background-position: -241px -54px;
+}
+
+/* line 1082, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#menu .production a {
+  width: 237px;
+  height: 50px;
+  background-position: -2px -2px;
+}
+
+/* line 1086, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#menu .production a:hover, .page-productionservice #menu .production a {
+  width: 237px;
+  height: 50px;
+  background-position: -2px -54px;
+}
+
+/* line 1089, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#menu #fb a {
+  width: 64px;
+  height: 50px;
+  background-position: -340px -106px;
+}
+
+/* line 1093, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+#menu #fb a:hover {
+  width: 64px;
+  height: 50px;
+  background-position: -274px -106px;
+}
+
+/* line 1097, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.video-placeholder-img {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 2048px;
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+  /* Set up positioning */
+  position: fixed;
+  top: 175px !important;
+  left: 0;
+}
+
+/* line 1116, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+nav#menu ul {
+  text-align: left;
+  display: inline;
+  margin: 0;
+  list-style: none;
+}
+
+/* line 1122, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+nav#menu ul li {
+  display: inline-block;
+  position: relative;
+  padding-right: 40px;
+  cursor: pointer;
+  text-transform: uppercase;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  font-size: 36px;
+}
+
+/* line 1136, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+nav#menu ul li.up_bump {
+  font-family: 'Tungsten-Medium', serif;
+  bottom: 45px;
+}
+
+/* line 1141, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+nav#menu ul li.up_bump_image {
+  bottom: 10px;
+}
+
+/* line 1145, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+nav#menu ul li ul {
+  padding: 0;
+  position: absolute;
+  top: 38px;
+  left: 0;
+  width: 190px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transiton: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -ms-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+  z-index: 100;
+}
+
+/* line 1164, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+nav#menu ul li ul li {
+  background: #fff;
+  display: block;
+  color: black;
+  font-size: 20px;
+  padding-left: 10px;
+  text-transform: lowercase;
+  z-index: 100;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* line 1176, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+nav#menu ul li ul li:hover {
+  color: #ce3229;
+}
+
+/* line 1180, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+nav#menu ul li:hover ul {
+  display: block;
+  opacity: 0.87;
+  visibility: visible;
+  z-index: 200;
+}
+
+/* line 1187, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+li#docs-features, li#docs-features a, li.psa-list-li::first-line, li.psa-list-li:first-line > a {
+  color: #ba1937;
+}
+
+/* line 1192, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+li#docs-features a:hover, li.psa-list-li::first-line:hover {
+  color: #FF0022;
+}
+
+/* line 1196, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.sub-menu-floated, li#psa-list {
+  position: absolute;
+  top: 50%;
+  left: -100%;
+  margin: 0;
+  padding: 0;
+  width: 50px;
+  float: right;
+  clear: left;
+  z-index: 5000;
+}
+
+/* line 1208, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+li#psa-list {
+  position: absolute;
+  display: list-item;
+  z-index: 6000;
+}
+
+/* line 1218, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.psa-list-li {
+  z-index: 9000;
+}
+
+/* line 1223, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.psa-list-li ul, li#psa-list, li#psa-list a {
+  color: #ba1937;
+  display: none;
+}
+
+/* line 1228, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+ul#psa-sub-ul {
+  display: none !important;
+}
+
+/* line 1232, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.psa-list-li:hover ul#psa-sub-ul {
+  display: block !important;
+}
+
+/* line 1236, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+li.psa-list-li:hover ul li#psa-list a {
+  z-index: 4000;
+  display: block;
+}
+
+/* line 1242, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+ul.psa-list-ul {
+  position: absolute;
+  top: -10px !important;
+}
+
+/* line 1247, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.team_paragraphs {
+  font-family: "futura-pt",sans-serif;
+  font-size: 14px !important;
+  line-height: 20px !important;
+  text-align: justify;
+  text-justify: inter-word;
+  margin-right: auto;
+  margin-left: auto;
+  width: 600px;
+}
+
+/* line 1260, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.card_center {
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+}
+
+/* line 1266, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.show_caption {
+  text-align: left;
+  font-size: 12px;
+  font-family: "futura-pt",sans-serif;
+  font-weight: 700;
+}
+
+/* line 1273, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/base.css.scss */
+.show_cap_description {
+  font-weight: 500;
+  white-space: pre;
+}
+/* line 6, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/devise.css.scss */
+#devise_login {
+  width: 200px;
+  margin: 50px auto;
+}
+/* line 1, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/mobile.scss */
+.mobile .top .bg {
+  position: relative;
+}
+
+/* line 6, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/mobile.scss */
+.mobile .top .info hr {
+  background: white;
+  padding: 0;
+  margin: 0;
+  margin: 14px auto;
+  max-width: 118px;
+}
+
+/* line 13, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/mobile.scss */
+.mobile .top .info p {
+  font-size: 18px !important;
+}
+
+/* line 18, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/mobile.scss */
+.mobile .top {
+  /*height: 480px;*/
+}
+
+/* line 24, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/mobile.scss */
+.mobile .top .info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  width: 100%;
+  height: 50%;
+  text-align: center;
+  color: white;
+  font-family: 'Tungsten-Medium', serif;
+  color: #000000;
+  font-size: 48px;
+}
+
+/* line 41, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/mobile.scss */
+.mobile .top .info p {
+  margin: 0;
+  padding: 0;
+  line-height: 120%;
+  padding-bottom: 10px;
+  font-size: 24px;
+}
+
+/* line 48, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/mobile.scss */
+.mobile .top .info p.last {
+  padding-bottom: 0;
+}
+
+/* line 55, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/mobile.scss */
+.mobile .block {
+  width: 100%;
+}
+
+/* line 58, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/mobile.scss */
+.mobile .inner {
+  text-align: center;
+}
+
+/* line 64, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/mobile.scss */
+.mobile .inner li {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 69, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/mobile.scss */
+.mobile .inner .work-list li {
+  margin-bottom: 20px;
+}
+
+/* line 73, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/mobile.scss */
+.mobile .inner li img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* line 79, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/mobile.scss */
+.mobile .inner .head {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 36px;
+}
+
+/* line 84, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/mobile.scss */
+.mobile img.thumb.m {
+  /*margin-bottom: 20px;*/
+}
+
+/* line 89, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/mobile.scss */
+.mobile .backstage {
+  padding-bottom: 30px;
+}
+
+/* line 92, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/mobile.scss */
+.mobile .production {
+  padding-top: 15px;
+  background-color: #161515;
+}
+
+/* line 96, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/mobile.scss */
+.mobile .production p {
+  margin: 0;
+  padding-left: 50px;
+  padding-right: 50px;
+  color: #ccc;
+  text-align: left;
+  font-size: 17px;
+  line-height: 26px;
+}
+
+/* line 105, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/mobile.scss */
+.mobile .production .contact {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+/* line 110, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/mobile.scss */
+.video-img-box {
+  max-width: 320px !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 114, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/mobile.scss */
+.video-img-box .padded-img {
+  background-color: #000;
+  height: 320px;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 0;
+}
+/* line 121, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/mobile.scss */
+.video-img-box .padded-img img {
+  width: 320px !important;
+  max-height: 180px;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 20% 0;
+}
+
+/* line 131, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/mobile.scss */
+.mobile-title {
+  margin-top: -5px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 320px;
+}
+
+/* line 138, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/mobile.scss */
+.mobile.bg, .mobile.top.info {
+  height: 100% !important;
+  overflow-y: hidden !important;
+}
+
+@media only screen and (max-width: 899px) {
+  /* line 145, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/mobile.scss */
+  .container.mobile .top .bg {
+    height: 380px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  /* line 151, /Users/lacoste/dev/clients/bunnylake/bunnylakefilms/app/assets/stylesheets/mobile.scss */
+  .container.mobile .top .bg {
+    height: 440px;
+  }
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+
+ */
+@font-face {
+  font-family: 'Tungsten-Medium';
+  src: url(/assets/Tungsten-Medium.eot);
+  /* IE9 Compat Modes */
+  src: url(/assets/Tungsten-Medium.eot?#iefix) format("embedded-opentype"), url(/assets/Tungsten-Medium.otf) format("opentype"), url(/assets/Tungsten-Medium.ttf) format("truetype"), url(/assets/Tungsten-Medium.svg#Tungsten-Medium) format("svg");
+  /* Legacy iOS */
+}
