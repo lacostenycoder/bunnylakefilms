@@ -23,3 +23,7 @@
         asset-url('Tungsten-Medium.ttf')  format('truetype'), /* Safari, Android, iOS */
         asset-url('Tungsten-Medium.svg#Tungsten-Medium') format('svg'); /* Legacy iOS */
  }
+
+.bold {
+  font-weight: 700;
+}

@@ -143,13 +143,32 @@
   }
 }
 
+@media only screen and (max-width: 375px) {
+  .container.mobile .top .bg {
+      height: 440px;
+  }
+  ul  {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
 @media only screen and (max-width: 320px) {
   .container.mobile .top .bg {
       height: 440px;
   }
+  ul  {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }
+
 
 .back_on_white {
   color: #000;
   background-color: #FFF;
+}
+
+.left > * {
+  text-align: left;
 }
